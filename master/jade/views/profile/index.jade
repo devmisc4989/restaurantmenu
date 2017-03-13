@@ -1,0 +1,5 @@
+div.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+  .sub-section-tab-wrapper
+    .tab-wrapper(ng-show='subtopnavbar.tabId==0' ng-include="'app/views/profile/profile.html'")
+    .tab-wrapper(ng-show='subtopnavbar.tabId==1' ng-include="'app/views/profile/apps.html'" ng-controller="ProfileAppsCtrl as vm")
+    .tab-wrapper(ng-show='subtopnavbar.tabId==2' ng-include="'app/views/profile/billing.html'")

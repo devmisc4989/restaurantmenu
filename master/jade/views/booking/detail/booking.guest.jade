@@ -1,0 +1,51 @@
+ul.collapsible.popout(data-collapsible='accordion')
+  li
+    .collapsible-header()
+      .row
+        legend.col-sm-12(style='margin-bottom: 10px;') Guest
+      .static-body
+        .row
+          .col-sm-8.col-sm-offset-2.text-center
+            .inner-addon.left-addon
+              i.fa.fa-user.pull-right(aria-hidden='true', style='font-size: 20px; margin-top: 6px; margin-bottom: -50px; padding-right: 20px;')
+              input.form-control(type='text', value="{{bookingGuest.name}}", style='font-size: 20px; font-weight: 300; text-align:center; border: none;')
+        br
+    .collapsible-body
+      div(flex="75" style='margin: auto;')
+        md-autocomplete.md-block(
+        md-selected-item="vm.selected_contact"
+        md-search-text-change="vm.search_text_change(vm.search_contact_text)"
+        md-search-text="vm.search_contact_text"
+        md-selected-item-change="vm.selected_item_change(item)"
+        md-items="item in vm.query_search(vm.search_contact_text)"
+        md-item-text="item.name"
+        md-min-length="0"
+        md-floating-label="NAME"
+        flex
+        )
+          md-item-template
+            span(
+            md-highlight-text="vm.search_contact_text"
+            md-highlight-flags="^i"
+            ) {{item.name}}
+
+        md-input-container.md-block.md-icon-float.md-icon-right
+          label EMAIL
+          input(
+          type="email"
+          ng-model='vm.current_contact.email'
+          )
+          md-icon &#xE0BE;
+
+        md-input-container.md-block.md-icon-float.md-icon-right
+          label PHONE
+          input(
+          type="phone"
+          ng-model='vm.current_contact.phone'
+          )
+          md-icon &#xE0CD;
+
+        div(align="center")
+          md-button.md-raised.md-primary(
+          ng-click="vm.update_guest()"
+          ) UPDATE GUEST

@@ -1,0 +1,14 @@
+.page-main-container.property-container(ng-controller='RestaurantOverviewCtrl as vm' ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+  .add-button.add-restaurant(ng-click="addRestaurant()") ADD RESTAURANT
+  .property-list.restaurant-list
+    .app-card.restaurant-card
+      .manage-restaurant
+        a.icon-right.icon-arrow2-right(ui-sref="app.restaurant") MANAGE RESTAURANT A
+        i.icon-star1.restaurant-favorite
+      .restaurant-detail
+        h2 Restaurant A
+        p 1616 Carroll, New York, 74 493
+        .edit-button.icon-option1(ng-hide="restaurant.edit" ng-click="restaurant.edit=true")
+        div(ng-show="restaurant.edit")
+          .edit-button.icon-option2(ng-click="restaurant.edit=false")
+          .delete-button.icon-trash(ng-click="deleteRestaurant(restaurant)")

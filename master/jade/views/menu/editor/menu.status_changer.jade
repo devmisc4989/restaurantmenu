@@ -1,0 +1,21 @@
+div(flex="60")
+    md-button.md-raised.btn1(
+    data-ng-click="vm.publish(menuData)"
+    data-ng-show="!menuData.is_published")
+        span PUBLISH
+            md-icon.material-icons.sky-blue-one publish
+
+    md-button.md-raised.btn1(
+    data-ng-click="vm.update(menuData)"
+    data-ng-show="menuData.is_published")
+        span UPDATE
+            md-icon.material-icons.orange-one publish
+
+div(flex="30" flex-xs="50" data-ng-show="menuData.is_published")
+    md-fab-speed-dial.md-scale(md-open='false', md-direction='down')
+        md-fab-trigger
+            md-button.md-icon-button()
+                md-icon.material-icons more_vert
+        md-fab-actions
+            md-button.md-raised.btn1(data-ng-click="vm.unpublish(menuData)")
+                span UNPUBLISH

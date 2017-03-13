@@ -1,0 +1,12 @@
+div.menu-option-rendered(flex="100")
+
+    div.menu-option-header(layout="row" flex="100")
+        p
+            span.option-type {{ menuData.type }}
+            span.option-description {{ menuData.description }}:
+            span(
+            data-ng-repeat="selection in menuData.selection"
+            data-ng-show="selection.description"
+            )
+                span() {{ selection.description }}
+                span ({{ selection.amount }}){{$last ? '' : ', '}}

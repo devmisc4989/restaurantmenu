@@ -1,0 +1,38 @@
+.menu-card(data-as-sortable-item-handle='')
+
+    div()
+        md-card(md-theme="menucloud-std" layout="column")
+
+            md-card-title(
+            layout="row"
+            layout-align="start center"
+            ui-sref="app.menu-editor({id: item.id})"
+            data-ng-click="vm.select_menu(item)"
+            )
+
+                md-card-title-text(flex="90" flex-xs="80")
+                    h2 {{ item.title }}
+
+                md-icon.material-icons(flex="10" flex-xs="20") keyboard_arrow_right
+
+            md-card-content(layout="row" layout-align="start center")
+
+                div(flex="5" flex-xs="10")
+                    .user-avatar {{ item.creator.first_name.charAt(0).toUpperCase() + item.creator.last_name.charAt(0).toUpperCase() }}
+
+                div(flex="75" flex-xs="60" layout-align="start center")
+                    p Updated by {{ item.creator.first_name }} /
+                        span.uppercase {{ item.createdAt | date:'dd MMMM yyyy'}}
+
+                div(flex)
+
+                div.actions(flex="20" flex-xs="30")
+                    md-fab-speed-dial.md-scale(md-open='false', md-direction='left')
+                        md-fab-trigger
+                            md-button.md-icon-button(aria-label='menu')
+                                md-icon.material-icons.orange-one more_vert
+                        md-fab-actions
+                            md-button.md-icon-button(aria-label='delete')
+                                md-icon.material-icons.dark-grey(ng-disabled="processing" ng-click="vm.destroy_menu(item, menuType)") delete
+
+                                //(ng-click="$event.preventDefault(); $event.stopPropagation();")

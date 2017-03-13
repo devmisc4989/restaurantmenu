@@ -1,0 +1,48 @@
+form.auth-form.has-subtitle.form-validate(
+ng-controller="AuthRegisterCtrl as vm",
+role='form',
+name="vm.registerForm",
+novalidate='',
+ng-submit="vm.register()"
+ng-autodisable
+)
+  .form-item.form-item-margin
+    input(type='text', name='first_name', placeholder='First Name', autocomplete="off", ng-model='vm.account.first_name', required='',
+    ng-class="{'input-danger': vm.registerForm.first_name.$dirty && (vm.registerForm.first_name.$error.required)}")
+    span.text-danger(ng-show="vm.registerForm.first_name.$dirty && vm.registerForm.first_name.$error.required") * First Name is required
+  .form-item.form-item-margin
+    input(type='text', name='last_name', placeholder='Last name', autocomplete="off", ng-model='vm.account.last_name', required='',
+    ng-class="{'input-danger': vm.registerForm.last_name.$dirty && (vm.registerForm.last_name.$error.required)}")
+    span.text-danger(ng-show="vm.registerForm.last_name.$dirty && vm.registerForm.last_name.$error.required") * Last Name is required
+  .form-item.form-item-margin
+    input(type='email', name='email', placeholder='Email', autocomplete="off", ng-model='vm.account.email', required='',
+    ng-class="{'input-danger': vm.registerForm.email.$dirty && (vm.registerForm.email.$error.required || vm.registerForm.email.$error.email)}")
+    span.text-danger(ng-show="vm.registerForm.email.$dirty && vm.registerForm.email.$error.required") * This field is required
+    span.text-danger(ng-show="vm.registerForm.email.$dirty && vm.registerForm.email.$error.email") * This field must be a valid email address
+  .form-item.form-item-margin
+    input(type='email', name='email_confirm', placeholder='Confirm email', ng-model='vm.email_confirm' ui-validate="'$value==vm.account.email'" ui-validate-watch="'email'", required='',
+    ng-class="{'input-danger': vm.registerForm.email_confirm.$dirty && (vm.registerForm.email_confirm.$error.validator)}")
+    span.text-danger(ng-show="vm.registerForm.email_confirm.$dirty && vm.registerForm.email_confirm.$error.validator") * Email does Not match
+  .form-item.form-item-margin
+    input.has-icon-right(
+    type='text'
+    name='place_data'
+    placeholder='Find location'
+    ng-model='vm.ac_search'
+    ng-autocomplete=''
+    options="vm.ac_options"
+    details="vm.ac_details"
+    required=''
+    ng-class="{'input-danger': vm.registerForm.place_data.$dirty && (vm.registerForm.place_data.$error.required)}"
+    )
+    i.input-icon-right.icon-location-pin-full
+    span.text-danger(ng-show="vm.registerForm.place_data.$dirty && vm.registerForm.place_data.$error.required") * This field is required
+  .form-item.form-item-margin-2x
+    input(type='checkbox', ng-required="true", name="terms_accepted", ng-model="vm.account.terms_accepted",
+    ng-class="{'input-danger': vm.registerForm.terms_accepted.$dirty && (vm.registerForm.terms_accepted.$error.required)}")
+    .checkbox-label I agree to the menuCLOUD terms and service agreement
+    span.text-danger(ng-show="vm.registerForm.terms_accepted.$dirty && vm.registerForm.terms_accepted.$error.required") * You must agree the terms
+  .form-item.form-item-margin-2x
+    button.btn.button(type='submit' ng-disabled='processing' md-ink-ripple) SIGN UP
+  .form-item.form-item-margin-2x.alert.alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+  .form-item.form-item-margin-2x.alert.alert-success.text-center(ng-show='vm.okMsg') {{vm.okMsg}}

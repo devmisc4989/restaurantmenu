@@ -1,0 +1,40 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2
+              table(style="width: 100%")
+                tr(ng-repeat="elem in item.lists")
+                  td
+                    input(type="text"
+                          style='font-size: 20px; font-weight: 300; text-align:left; border: none;'
+                          value="{{elem.list}}")
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          table(style="width: 100%")
+            tr(ng-repeat="elem in item.lists")
+              td
+                input(type="text"
+                      style='font-size: 20px; font-weight: 300; text-align:left; border: none;'
+                      value="{{elem.list}}")
+              td
+                a.remove-link(ng-click="vm.delete_list(elem.position)")
+                  i.fa.fa-times.pull-right
+
+          md-input-container.md-block.md-icon-float.md-icon-right
+            input(
+            type="text"
+            ng-model='vm.selected_list'
+            placeholder="PLACE YOUR LIST ITEM HERE"
+            )
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.add_list()"
+            ) 
+              i.icon-plus
+              | ADD TO LIST

@@ -1,0 +1,14 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2.text-center
+              .inner-addon.left-addon
+                span(style='font-size: 20px; font-weight: 300; text-align:center;') {{item.value}}
+          br
+      .collapsible-body
+        div.text-center(flex="75" style='margin: auto;')
+          span(style='font-size: 20px; font-weight: 300; text-align:center;') {{item.value}}

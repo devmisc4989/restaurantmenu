@@ -1,0 +1,106 @@
+
+md-dialog.booking-add(
+flex="35"
+flex-xs="100"
+ng-disabled="vm.disabled"
+md-theme="menucloud-std"
+)
+
+    form(ng-cloak='' name="vm.dialogForm" ng-disabled="vm.disabled")
+
+        md-toolbar.dialog(layout="row")
+            .md-toolbar-tools
+                span(flex='10' flex-xs="20")
+                h2.md-headline(flex='80') CREATE BOOKING
+                span(flex='') 
+                md-button.md-icon-button(ng-click='vm.cancel()' flex='10' flex-xs="20")
+                    md-icon(md-font-set="md" aria-label="Close") close
+
+        md-dialog-content
+            .md-dialog-content.dialog(layout="column" layout-align="center")
+                div(flex="75")
+                    form
+                        md-input-container.md-block.booking-type
+                            md-select(
+                            data-ng-model="vm.selected_booking_type"
+                            placeholder="BOOKING TYPE"
+                            ng-model-options="{trackBy: '$value.id'}"
+                            )
+                                md-option(
+                                data-ng-repeat="type in vm.booking_types"
+                                data-ng-value="type"
+                                ) {{ type.name }}
+                        md-input-container.md-block 
+                            label EVENT DATE 
+                            adm-dtp.event-date( 
+                            ng-model='vm.selected_date' 
+                            placeholder="EVENT DATE"                             
+                            options="{dtpType: 'date', default:'', format: 'MM/DD/YYYY hh:mm'}" 
+                            required='' 
+                            ) 
+ 
+                         md-input-container.md-block
+                            label GUEST COUNT
+                            input(
+                            type="number"
+                            name="count"
+                            ng-model='vm.booking.number_of_guests'
+                            required=''
+                            )
+                        .autocomplete-container
+                            h3.md-title GUEST
+
+                            md-autocomplete.md-block(
+                            md-selected-item="vm.selected_contact"
+                            md-search-text-change="vm.search_text_change(vm.search_contact_text)"
+                            md-search-text="vm.search_contact_text"
+                            md-selected-item-change="vm.selected_item_change(item)"
+                            md-items="item in vm.query_search(vm.search_contact_text)"
+                            md-item-text="item.name"
+                            md-min-length="0"
+                            md-floating-label="NAME"
+                            required=''
+                            flex
+                            )
+                                md-item-template
+                                    span(
+                                    md-highlight-text="vm.search_contact_text"
+                                    md-highlight-flags="^i"
+                                    ) {{item.name}}
+
+                        md-input-container.md-block
+                            label EMAIL
+                            input(
+                            type="email"
+                            name="email"
+                            ng-model='vm.booking.contact.email'
+                            required=''
+                            )
+
+                        md-input-container.md-block
+                            label PHONE
+                            input(
+                            type="phone"
+                            name="phone"
+                            ng-model='vm.booking.contact.phone'
+                            )
+
+                        div
+                            h3.md-title BOOKING NOTE
+
+                        md-input-container.md-block
+                            label NOTE
+                            textarea(
+                            type="text"
+                            name="note"
+                            rows="3"
+                            ng-model='vm.booking.notes'
+                            )
+
+        md-dialog-actions.dialog(layout="row" layout-align="center center")
+            div.md-dialog-actions
+                span(flex=40)
+                span(flex='')
+                md-button.btn1.md-raised.md-primary(flex='40' ng-click="vm.add_booking()" ng-disabled="vm.disabled") Add
+                span(flex=40)
+

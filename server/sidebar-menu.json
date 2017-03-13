@@ -1,0 +1,17 @@
+[
+  {
+    "text": "HOME",
+    "sref": "app.dashboard",
+    "icon": "icon-home"
+  },
+  {
+    "text": "RESTAURANTS",
+    "sref": "app.restaurant",
+    "icon": "icon-small-restaurant"
+  },
+  {
+    "text": "MENUS",
+    "sref": "app.menu",
+    "icon": "icon-small-menu"
+  }
+]

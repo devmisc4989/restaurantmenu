@@ -1,0 +1,48 @@
+
+md-dialog(
+flex="35"
+flex-xs="100"
+ng-disabled="vm.disabled"
+md-theme="menucloud-std"
+)
+
+    form(ng-cloak='' name="vm.dialogForm" ng-disabled="vm.disabled")
+
+        md-toolbar.dialog(layout="row")
+            .md-toolbar-tools
+                span(flex='10' flex-xs="20")
+                h2.md-headline(flex='80') Add Menu
+                span(flex='')
+                md-button.md-icon-button(ng-click='vm.cancel()' flex='10' flex-xs="20")
+                    md-icon(md-font-set="md" aria-label="Close") close
+
+        md-dialog-content
+            .md-dialog-content.dialog(layout="column" layout-align="center")
+                div(flex="75")
+                    form
+                        div
+                            h3.md-title Enter new menu details
+
+                        md-input-container.md-block
+                            label Title
+                            textarea(
+                            type="text"
+                            name="title"
+                            ng-model='vm.menu.title'
+                            )
+                            
+                        md-input-container.md-block
+                            label Description
+                            textarea(
+                            type="text"
+                            name="description"
+                            ng-model='vm.menu.description'
+                            )
+
+        md-dialog-actions.dialog(layout="row" layout-align="center center")
+            div.md-dialog-actions
+                span(flex=40)
+                span(flex='')
+                md-button.btn1.md-raised.md-primary(flex='40' ng-click="vm.add_menu()" ng-disabled="vm.disabled") Add
+                span(flex=40)
+

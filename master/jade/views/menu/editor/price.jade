@@ -1,0 +1,45 @@
+div(layout="row" flex="100" layout-align="end center")
+
+    md-button.md-icon-button(data-ng-click="vm.show_description_input = !vm.show_description_input")
+        md-icon.material-icons label
+
+    md-input-container.price-label.paragraph2(
+    flex="50"
+    data-ng-show="menuData.description || vm.show_description_input"
+    md-no-float
+    )
+        input(
+        placeholder="Label"
+        data-ng-model="menuData.description"
+        data-ng-focus="vm.label_focused = true"
+        data-ng-blur="vm.label_focused = false"
+        )
+
+    md-button.md-icon-button(
+    data-ng-click="vm.remove_label(menuData)"
+    data-visible="vm.show_label_close_btn(menuData)"
+    )
+        md-icon.material-icons close
+
+    md-input-container.paragraph2(
+    flex="30"
+    md-no-float
+    )
+        input(
+        placeholder="Price"
+        data-ng-model="menuData.amount"
+        data-ng-focus="vm.show_close_btn = true"
+        data-ng-blur="vm.hide_close_btn()"
+        )
+
+    md-button.md-icon-button(
+    data-ng-click="vm.add_price($parent.$parent.menuData)"
+    data-ng-show="!vm.show_close_btn && $parent.$last"
+    )
+        md-icon.material-icons add
+
+    md-button.md-icon-button(
+    data-ng-click="vm.remove_price(menuData, $parent.$parent.menuData)"
+    data-ng-show="!(!vm.show_close_btn && $parent.$last)"
+    )
+        md-icon.material-icons close

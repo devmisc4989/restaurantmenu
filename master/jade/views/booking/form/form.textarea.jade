@@ -1,0 +1,30 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2.text-center
+              .inner-addon.left-addon
+                textarea.form-control.input-sub-header(
+                  rows="5", 
+                  placeholder="ANSWER GOES HERE" 
+                  style="border: 0; resize: none; font-size: 20px; font-weight: 300;"
+                )
+                  {{item.value}}
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+
+          textarea.form-control.input-sub-header(
+          ng-model='item.value'
+          rows="5"
+          placeholder="ANSWER GOES HERE" 
+          style="border: 0; resize: none; font-size: 20px; font-weight: 300;"        
+          )
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.save_value()"
+            ) SAVE

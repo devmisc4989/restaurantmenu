@@ -1,0 +1,60 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') MENUS
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2.text-center
+              table.elements-table
+                tr(ng-repeat="elem in vm.menu_datas")
+                  td.text-center
+                    {{elem.title}} 
+                    i.fa.fa-icon.fa-arrow-right.normal
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          table.elements-table
+            tr(ng-repeat="elem in vm.selection_datas")
+              td
+                a.add-link(ng-click="vm.add_select_to_menu(elem.id)")
+                  i.fa.fa-plus-circle
+                  |   {{elem.title}}
+          br
+          table.elements-table
+            tr(ng-repeat="elem in vm.menu_datas")
+              td
+                a.item-link(ng-click="vm.delete_menu(elem.id)")
+                  i.fa.fa-times
+                |   {{elem.title}} 
+                i.fa.fa-icon.fa-arrow-right.normal
+          br
+          md-autocomplete.md-block(
+          md-selected-item="vm.selected_menu"
+          md-search-text-change="vm.search_text_change(vm.search_menu_text)"
+          md-search-text="vm.search_menu_text"
+          md-selected-item-change="vm.selected_item_change(item)"
+          md-items="item in vm.query_search(vm.search_menu_text)"
+          md-item-text="item.title"
+          md-min-length="0"
+          md-floating-label="MENU NAME"
+          ng-show="vm.show_menu_line"
+          flex
+          )
+            md-item-template
+              span(
+              md-highlight-text="vm.search_menu_text"
+              md-highlight-flags="^i"
+              ) {{item.title}}
+            md-not-found 
+              a.add-new-menu-link(
+                ng-click="vm.add_new_menu()"                
+              ) + Add {{vm.search_menu_text}} as new menu
+
+        div(align="center" ng-show="!vm.show_menu_line")
+          md-button.md-raised.md-primary(
+          ng-click="vm.show_add_menu()"
+          ) 
+            i.icon-plus
+            | {{vm.add_menu_label}}
+        br

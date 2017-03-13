@@ -1,0 +1,41 @@
+.btn-group-container(ng-if="flowData == 'simple'")
+    .btn-group-justified
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'pending' ? 'active' : ''") 
+            span 
+                | Incoming
+                br
+                | Request
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'confirmed' ? 'active' : ''") 
+            span Confirmed                
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'feedback' ? 'active' : ''")
+            span 
+                | Waiting for 
+                br
+                | Feedback
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'closed' ? 'active' : ''") Closed
+
+.btn-group-container(ng-if="flowData == 'detailed'")
+    .btn-group-justified
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'pending' ? 'active' : ''")
+            span 
+                | Incoming
+                br
+                | Request            
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'proposal' ? 'active' : ''")
+            span 
+                | Proposal
+                br
+                | To be sent
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'tentative' ? 'active' : ''")
+            span 
+                | Waiting for
+                br
+                | Customer
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'confirmed' ? 'active' : ''") 
+            span Confirmed
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'feedback' ? 'active' : ''") 
+            span 
+                | Waiting for
+                br
+                | Feedback
+        a.btn-group.btn-menu-bar(ng-class="statusData == 'closed' ? 'active' : ''") Closed

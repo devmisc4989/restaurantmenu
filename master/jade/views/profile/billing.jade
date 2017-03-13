@@ -1,0 +1,25 @@
+.help-contact-button.icon-left.icon-need-help
+  | Need help contact support&nbsp;
+  a(href='') here
+.property-list
+  .property-wrapper.property-billing-info
+    .property-title.float-left
+      h4 Billing information
+    .property-billing-detail.float-left Payment method: Visa ending in 7349
+    .property-billing-update.float-right.text-center
+      p Update payment details
+      .subform-item.item-button
+        button.positive-button(md-ink-ripple ng-click="editBillingInfo()") Edit
+  .float-clear
+  .property-wrapper.property-billing-table
+    table
+      thead
+        tr
+          th(ng-repeat="field in billingInfo.fields") {{field.name}}
+      tbody
+        tr(ng-repeat="data in billingInfo.data")
+          td {{data.date}}
+          td {{data.payment}}
+          td {{data.app}}
+          td
+            i.icon-table-view

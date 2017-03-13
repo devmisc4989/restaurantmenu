@@ -1,0 +1,64 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') QUOTES
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2
+              table.elements-table
+                tr(ng-repeat="elem in vm.fixed_menus" ng-class="{'hidden-row': vm.is_hidden_item(elem)}")
+                  td.text-left(width="10%" ) 
+                    i.fa.fa-eye.pull-left(ng-if="vm.is_hidden_item(elem) == false")
+                    i.fa.fa-eye-slash.pull-left(ng-if="vm.is_hidden_item(elem)")
+                  td.text-left(width="50%") {{elem.title}}
+                  td.text-right(width="10%") {{elem.price}}
+                  td.text-left(width="30%") per person
+                tr(ng-repeat="elem in item.quotes")                   
+                  td.text-left(width="10%") 
+                    i.fa.fa-times.pull-left
+                  td.text-left(width="50%") {{elem.quote}}
+                  td.text-right(width="10%") {{elem.price}}
+                  td.text-left(width="30%") per person
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          table.elements-table
+            tr(ng-repeat="elem in vm.fixed_menus" ng-class="{'hidden-row': vm.is_hidden_item(elem)}")
+              td.text-left(width="10%" ) 
+                a.item-link(ng-click="vm.hidden_quote(elem)")
+                  i.fa.fa-eye.pull-left(ng-if="vm.is_hidden_item(elem) == false")
+                  i.fa.fa-eye-slash.pull-left(ng-if="vm.is_hidden_item(elem)")
+              td.text-left(width="50%") {{elem.title}}
+              td.text-right(width="10%") {{elem.price}}
+              td.text-left(width="30%") per person
+            tr(ng-repeat="elem in item.quotes")     
+              td.text-left(width="10%") 
+                a.remove-link(ng-click="vm.delete_quote($index)")
+                  i.fa.fa-times.pull-left
+              td.text-left(width="50%") {{elem.quote}}
+              td.text-right(width="10%") {{elem.price}}
+              td.text-left(width="30%") per person
+
+          div(layout="row")          
+            md-input-container.md-block.md-icon-float.md-icon-right(flex="60")
+              input(
+                type="text"
+                ng-model='vm.selected_quote_item'
+                placeholder="QUOTE DESCRIPTION"
+              )
+
+            md-input-container.md-block.md-icon-float.md-icon-right(flex="40")
+              input(
+                type="text"
+                ng-model='vm.selected_quote_price'
+                placeholder="PRICE"
+              )
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.add_quote()"
+            ) 
+              i.icon-plus
+              | ADD A QUOTE
+          br

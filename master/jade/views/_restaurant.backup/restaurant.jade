@@ -1,0 +1,8 @@
+div.page-main-container(ng-controller='RestaurantCtrl as vm' ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+  .text-center
+    h3 Restaurant
+    .sub-section-tab-wrapper
+      .tab-wrapper(ng-show='subtopnavbar.tabId==0')
+        p Contact Page
+      .tab-wrapper(ng-show='subtopnavbar.tabId==1')
+        p Access Page

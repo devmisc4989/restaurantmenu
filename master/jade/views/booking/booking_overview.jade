@@ -1,0 +1,43 @@
+.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+
+    .add-button(md-theme="menucloud-std")
+        md-button.md-raised.md-primary(data-ng-click="vm.new_booking()")
+            span NEW BOOKING
+
+    //.setting-button(md-theme="menucloud-std")
+        md-button.md-raised.btn1(data-ng-click="vm.setting()")
+            i.fa.fa-cog
+
+    .left_item.add_ellipsis_if_overflow(md-theme="menucloud-std")
+
+        md-select.md-no-underline(
+        data-ng-model="vm.selected_business"
+        placeholder="Choose business"
+        ng-model-options="{trackBy: '$value.id'}"
+        )
+
+            md-option(
+            data-ng-repeat="business in vm.businesses"
+            data-ng-value="business"
+            ) {{ business.name }}
+
+    .property-list.content-without-subnavbar
+
+        div(md-theme="menucloud-std")
+            booking-stats
+            booking-attention
+            div.row.property-title.booking-search
+                .col-md-6
+                    h4.md-title BOOKINGS
+                .col-md-6
+                    md-input-container.md-block.md-icon-float.md-icon-right
+                        input#input_search_box(
+                        type="text"
+                        ng-model="vm.search_booking_text"
+                        md-autofocus
+                        )
+                        md-icon(data-ng-click="vm.set_focus_on_text()")
+                            i.fa.fa-icon.fa-search
+            div.property-wrapper
+
+            bookings

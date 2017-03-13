@@ -1,0 +1,99 @@
+.success-feedback-alert(ng-show='vm.okMsg') {{vm.okMsg}}
+.property-list
+  .property-wrapper
+    .property-title
+      h4 LOCATION
+    .property-item-group
+      .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.location=true" ng-hide="vm.edit.contact.location") 1616 Carroll, New York, 74 493
+      form.property-item-subform(
+      role='form'
+      name="vm.locationForm"
+      novalidate=''
+      ng-submit="vm.updateContactLocation()"
+      ng-show="vm.edit.contact.location"
+      )
+        .subform-item.item-input.item-margin-bottom.icon-right.icon-location-pin-full
+          input(
+          type="text"
+          name="location"
+          placeholder=""
+          ng-model='vm.ac_search'
+          ng-autocomplete=''
+          options="vm.ac_options"
+          details="vm.ac_details"
+          required=''
+          )
+          span.text-danger(ng-show="vm.locationForm.location.$dirty && vm.locationForm.location.$error.required") * This field is required
+        .property-item 1616 Carroll, New York, 74 493
+        .subform-item.item-button
+          button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+        .subform-item
+          .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+  .property-wrapper
+    .property-title
+      h4 CONTACT
+    .property-item-group
+      .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.email=true" ng-hide="vm.edit.contact.email") food.company@gmail.com
+      form.property-item-subform(
+      role='form'
+      name="vm.emailForm"
+      novalidate=''
+      ng-submit="vm.updateContactEmail()",
+      ng-show="vm.edit.contact.email"
+      )
+        .property-item food.company@gmail.com
+        .subform-item.item-input
+          span.input-label New email
+          input(type="email" name="email" ng-model="vm.contact.email" placeholder="" required='')
+          span.text-danger(ng-show="vm.emailForm.email.$dirty && vm.emailForm.email.$error.required") * This field is required
+          span.text-danger(ng-show="vm.emailForm.email.$dirty && vm.emailForm.email.$error.email") * This field must be a valid email address
+        .subform-item.item-input
+          span.input-label Confirm new email
+          input(type="email" name="confirm_email" ng-model="vm.contact.confirm_email" placeholder="" ui-validate="'$value==vm.contact.email'" ui-validate-watch="'email'" required='')
+          span.text-danger(ng-show="vm.emailForm.confirm_email.$dirty && vm.emailForm.confirm_email.$error.required") * This field is required
+          span.text-danger(ng-show="vm.emailForm.confirm_email.$dirty && vm.emailForm.confirm_email.$error.validator") * Email does Not match
+        .subform-item.item-button
+          button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+        .subform-item
+          .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+    .property-item-group
+      .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.phone=true" ng-hide="vm.edit.contact.phone") 08 9837 82
+      form.property-item-subform(
+      role='form'
+      name="vm.phoneForm"
+      novalidate=''
+      ng-submit="vm.updateContactPhone()",
+      ng-show="vm.edit.contact.phone"
+      )
+        .property-item 08 9837 82
+        .subform-item.item-input
+          span.input-label New phonenumber
+          input(type="number" name="phonenumber" ng-model="vm.contact.phonenumber" placeholder="" required='')
+          span.text-danger(ng-show="vm.phoneForm.phonenumber.$dirty && vm.phoneForm.phonenumber.$error.required") * This field is required
+        .subform-item.item-input
+          span.input-label Confirm new phonenumber
+          input(type="number" name="confirm_phonenumber" ng-model="vm.contact.confirm_phonenumber" placeholder="" ui-validate="'$value==vm.contact.phonenumber'" ui-validate-watch="'phonenumber'" required='')
+          span.text-danger(ng-show="vm.phoneForm.confirm_phonenumber.$dirty && vm.phoneForm.confirm_phonenumber.$error.required") * This field is required
+          span.text-danger(ng-show="vm.phoneForm.confirm_phonenumber.$dirty && vm.phoneForm.confirm_phonenumber.$error.validator") * PhoneNumber does Not match
+        .subform-item.item-button
+          button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+        .subform-item
+          .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+  .property-wrapper
+    .property-title
+      h4 DESCRIPTION
+    .property-item-group
+      .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.description=true" ng-hide="vm.edit.contact.description") Give a brief description of your business
+      form.property-item-subform(
+      role='form'
+      name="vm.descriptionForm"
+      novalidate=''
+      ng-submit="vm.updateContactDescription()",
+      ng-show="vm.edit.contact.description"
+      )
+        .subform-item.item-input
+          textarea(ng-model="vm.contact.description" placeholder="Give a brief description of your business")
+        .subform-item.item-button
+          button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+        .subform-item
+          .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}

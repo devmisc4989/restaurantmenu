@@ -1,0 +1,32 @@
+div.menus-list(
+data-md-theme="menucloud-std"
+data-as-sortable="vm.sort_options"
+data-ng-model="vm.items"
+)
+
+    menu-item(
+    data-ng-repeat="item in vm.items"
+    data-menu="item"
+    data-as-sortable-item=''
+    data-sortable="true"
+    data-menu-type="vm.menu_type"
+    )
+
+//div.menus-list.to-drag(data-md-theme="menucloud-std")
+//
+//    ul(
+//    dnd-list="vm.items"
+//    dnd-allowed-types="published"
+//    )
+//
+//        menu-item(
+//            data-ng-repeat="item in vm.items"
+//            data-menu="item"
+//            data-type="vm.menu_type"
+//            dnd-draggable="item"
+//            dnd-type="vm.menu_type"
+//            dnd-moved="vm.remove_from_list($index)"
+//            dnd-effect-allowed="move"
+//            dnd-selected="vm.selected = item"
+//            ng-class="{'selected': vm.selected === item}"
+//        )

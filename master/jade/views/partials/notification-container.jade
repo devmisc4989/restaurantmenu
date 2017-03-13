@@ -1,0 +1,8 @@
+div.notification-container
+   div(ng-if="notificationContainerCtrl.toasts.length == 0")
+      div(layout="column" layout-align="center center" layout-padding) No Recent Messages
+   div(layout="column" layout-padding ng-repeat="toast in notificationContainerCtrl.toasts" ng-if="notificationContainerCtrl.toasts.length > 0")
+      div(layout="row" layout-align="space-between center")
+         div.notification-title {{toast.headline}}
+         i.icon-x.close-icon-btn(ng-click="notificationContainerCtrl.removeToast(toast)")
+      div.notification-desc {{toast.subhead}}

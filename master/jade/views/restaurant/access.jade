@@ -1,0 +1,25 @@
+
+.add-button.with-sub-navbar(md-theme="menucloud-std")
+    md-button.md-raised.btn1(ng-click="vm.actions.addCollaborator()") ADD COLLABORATORS
+
+.property-list.property-access-list
+  .property-wrapper
+    .property-title
+      h4 COLLABORATORS
+    .property-item-group.property-access-wrapper
+      .property-item.property-access.access-owner.avatar-left
+        .user-avatar {{vm.restaurant.owner.first_name[0].toUpperCase()+vm.restaurant.owner.last_name[0].toUpperCase()}}
+        .username {{vm.restaurant.owner.first_name}} {{user.last_name}}
+        .user-description owner
+      .property-item.property-access.access-owner.avatar-left(ng-repeat="user in vm.restaurant.users")
+        .user-avatar {{user.first_name[0].toUpperCase()+user.last_name[0].toUpperCase()}}
+        .username {{user.first_name}} {{user.last_name}}
+        .user-description collaborator
+      //- .property-item.property-access.access-collaborator.avatar-left.icon-right.icon-close-01
+      //-   .user-avatar(style="background-color: #4A4A4A") FC
+      //-   .username Fred Carson
+      //-   .user-description collaborator
+      //- .property-item.property-access.access-collaborator.avatar-left.icon-right.icon-close-01
+      //-   .user-avatar(style="background-color: #BB76F8") AC
+      //-   .username Amanda Casey
+      //-   .user-description collaborator

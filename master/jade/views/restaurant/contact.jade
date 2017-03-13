@@ -1,0 +1,169 @@
+.success-feedback-alert(ng-show='vm.okMsg') {{vm.okMsg}}
+.alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+
+.add-button.with-sub-navbar(md-theme="menucloud-std")
+    md-button.md-raised.md-primary.btn1(ng-click="vm.actions.updateRestaurant()" ng-disabled="processing") SAVE
+
+.property-list.property-contact-list(layout="column" md-theme="menucloud-std")
+    .property-wrapper
+        .property-title(layout="row")
+            h4.md-title NAME
+        div(layout="row" layout-align="center")
+            div(flex="75")
+                md-input-container.layout-fill.md-block()
+                    label Name
+                    input(type="text" ng-model="vm.restaurant.name")
+        //- .subform-item.item-button
+          button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+    //md-button.md-warn.md-fab.md-fab-top-right(style="top:120px;" ng-click="vm.actions.updateRestaurant()" ng-disabled="processing")
+    //    md-icon(md-font-set="md" aria-label="" ) save
+    //- md-button.md-accent.md-fab.md-fab-bottom-right
+    //-   md-icon(md-font-set="md" aria-label="" ng-click="vm.actions.updateRestaurant()")
+    .property-wrapper
+        .property-title(layout="row")
+            h4 LOCATION
+        div(layout="row" layout-align="center")
+            //- .property-item.icon-right.icon-edit-pencil.layout-fill(ng-click="vm.edit.contact.location=true" ng-hide="vm.edit.contact.location") {{vm.getPlainAddress()}}
+            div(flex="75")
+
+                //- .subform-item.item-input.item-margin-bottom.icon-right.icon-location-pin-full
+                  input(
+                    type="text"
+                    name="location"
+                    placeholder=""
+                    ng-model='vm.ac_search'
+                    ng-autocomplete=''
+                    options="vm.ac_options"
+                    details="vm.ac_details"
+                    required=''
+                    ng-blur="vm.edit.contact.location=false"
+                  )
+                //- div(flex)
+                  md-input-container(flex)
+                    label Find Location
+                    input(
+                      type="text"
+                      name="location"
+                      placeholder=""
+                      ng-model='vm.ac_search'
+                      ng-autocomplete=''
+                      options="vm.ac_options"
+                      details="vm.ac_details"
+                      required=''
+                      ng-blur="vm.edit.contact.location=false"
+                    )
+
+                    span.text-danger(ng-show="vm.locationForm.location.$dirty && vm.locationForm.location.$error.required") * This field is required
+                //- div(flex)
+                md-input-container.md-block
+                    label Line 1
+                    input(
+                    type="text"
+                    name="line_1"
+                    placeholder=""
+                    ng-model='vm.restaurant.address.line_1'
+                    )
+                //- div
+                md-input-container.md-block
+                    label Line 2
+                    input(
+                    type="text"
+                    name="line_2"
+                    placeholder=""
+                    ng-model='vm.restaurant.address.line_2'
+                    )
+                //- div
+                md-input-container.md-block
+                    label City
+                    input(
+                    type="text"
+                    name="city"
+                    placeholder=""
+                    ng-model='vm.restaurant.address.city'
+                    )
+                //- div
+                md-input-container.md-block
+                    label Region
+                    input(
+                    type="text"
+                    name="region"
+                    placeholder=""
+                    ng-model='vm.restaurant.address.region'
+                    )
+                //- div
+                md-input-container.md-block
+                    label Postal Code
+                    input(
+                    type="text"
+                    name="postal_code"
+                    placeholder=""
+                    ng-model='vm.restaurant.address.postal_code'
+                    )
+
+    .property-wrapper
+        .property-title(layout="row")
+            h4 CONTACT
+        div(layout="row" layout-align="center")
+            div(flex="75")
+                //- .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.email=true" ng-hide="vm.edit.contact.email") food.company@gmail.com
+                form.layout-fill(
+                role='form'
+                name="vm.emailForm"
+                novalidate=''
+                ng-submit="vm.actions.updateRestaurant()",
+                )
+                    //- .property-item food.company@gmail.com
+
+                    md-input-container.md-block
+                        label Email
+                        md-icon.md-warn(md-font-set="md" aria-label="Email") email
+                        input(type="text" ng-model="vm.restaurant.email")
+                    md-input-container.md-block
+                        label Phone
+                        md-icon.md-warn(md-font-set="md" aria-label="Phone") phone
+                        input(type="text" ng-model="vm.restaurant.phone")
+                    md-input-container.md-block
+                        label Website
+                        md-icon.md-warn(md-font-set="md" aria-label="First Name") web
+                        input(type="text" ng-model="vm.restaurant.website")
+                    //- .subform-item.item-input
+                    //-   span.input-label Confirm new email
+                    //-   input(type="email" name="confirm_email" ng-model="vm.contact.confirm_email" placeholder="" ui-validate="'$value==vm.contact.email'" ui-validate-watch="'email'" required='')
+                    //-   span.text-danger(ng-show="vm.emailForm.confirm_email.$dirty && vm.emailForm.confirm_email.$error.required") * This field is required
+                    //-   span.text-danger(ng-show="vm.emailForm.confirm_email.$dirty && vm.emailForm.confirm_email.$error.validator") * Email does Not match
+                    //- .subform-item.item-button
+                    //-   button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+
+        //- .property-item-group
+          .property-item.icon-right.icon-edit-pencil(ng-click="vm.edit.contact.phone=true" ng-hide="vm.edit.contact.phone") 08 9837 82
+          form.property-item-subform(
+          role='form'
+          name="vm.phoneForm"
+          novalidate=''
+          ng-submit="vm.updateContactPhone()",
+          ng-show="vm.edit.contact.phone"
+          )
+            .property-item 08 9837 82
+            .subform-item.item-input
+              span.input-label New phonenumber
+              input(type="number" name="phonenumber" ng-model="vm.contact.phonenumber" placeholder="" required='')
+              span.text-danger(ng-show="vm.phoneForm.phonenumber.$dirty && vm.phoneForm.phonenumber.$error.required") * This field is required
+            .subform-item.item-input
+              span.input-label Confirm new phonenumber
+              input(type="number" name="confirm_phonenumber" ng-model="vm.contact.confirm_phonenumber" placeholder="" ui-validate="'$value==vm.contact.phonenumber'" ui-validate-watch="'phonenumber'" required='')
+              span.text-danger(ng-show="vm.phoneForm.confirm_phonenumber.$dirty && vm.phoneForm.confirm_phonenumber.$error.required") * This field is required
+              span.text-danger(ng-show="vm.phoneForm.confirm_phonenumber.$dirty && vm.phoneForm.confirm_phonenumber.$error.validator") * PhoneNumber does Not match
+            .subform-item.item-button
+              button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE
+            .subform-item
+              .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+    .property-wrapper
+        .property-title(layout="row")
+            h4 DESCRIPTION
+        div(layout="row" layout-align="center")
+            div(flex="75")
+                md-input-container.md-block
+                    label Description
+                    textarea(ng-model="vm.restaurant.description" placeholder="Give a brief description of your business")
+                //- .subform-item.item-button
+                //-   button.positive-button(type="submit" md-ink-ripple ng-disabled="processing") SAVE

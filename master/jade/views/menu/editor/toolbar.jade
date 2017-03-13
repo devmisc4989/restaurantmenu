@@ -1,0 +1,38 @@
+div(
+data-ng-show="vm.mark_selected"
+)
+
+    md-card.editor.menu-toolbar(
+    id="menu-toolbar"
+    md-theme="menucloud-std",
+    layout="column",
+    data-ng-style="vm.style"
+    data-ng-class="{ 'true':'horizontal layout-row', 'false':'vertical layout-column'}[vm.small_screen]"
+    )
+
+        md-button(
+        layout="row",
+        data-ng-click="vm.add_item()"
+        )
+            md-icon.material-icons add
+
+        md-button(
+        layout="row",
+        data-ng-click="vm.add_fixed_price_item()",
+        ng-if="vm.menu_object.fixed_price"
+        ng-disabled="vm.menu_has_fixed_price_item()"
+        )
+            md-tooltip(md-direction="right") Add Fixed Price Item
+            md-icon.material-icons local_atm
+
+        md-button(
+        layout="row"
+        data-ng-click="vm.add_category()"
+        )
+            md-icon.material-icons device_hub
+
+        md-button(
+        layout="row"
+        data-ng-click="vm.add_note()"
+        )
+            md-icon.material-icons reorder

@@ -1,0 +1,8 @@
+table(width='100%')
+  tr
+    td(style='padding-top: 10px; padding-bottom: 10px;')
+      a(style='color: #5EC1E2;') {{item.action.actor_name}}
+      |  had this to say:
+    td.text-right(style='padding-top: 10px; padding-bottom: 10px; color: #8D8D8D;') {{vm.formatDate(item.action.timestamp)}}
+pre {{item.content}}
+hr

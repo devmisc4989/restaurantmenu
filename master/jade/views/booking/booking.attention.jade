@@ -1,0 +1,6 @@
+div.bookings-list.attention-list(data-md-theme="menucloud-std")
+    booking-attention-item(
+        data-ng-repeat="item in vm.bookings_attention"
+        data-booking="item"
+    )
+div.attention-footer(ng-if="vm.bookings_attention.length > 0")

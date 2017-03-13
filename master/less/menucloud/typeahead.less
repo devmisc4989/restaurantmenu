@@ -1,0 +1,48 @@
+.custom-popup-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: @menucloud-view-background;
+}
+
+.custom-popup-wrapper > .message {
+  padding: 10px 20px;
+  border-bottom: 1px solid @menucloud-light-grey-color;
+  color: @menucloud-medium-grey-color;
+}
+
+.custom-popup-wrapper > .dropdown-menu {
+  position: static;
+  float: none;
+  display: block;
+  min-width: 160px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 0;
+}
+
+.typeahead-dropdown {
+  .add-new-product {
+    font-size: @menucloud-font-medium-2;
+    padding: 10px 15px 10px 5px;
+    text-align: left;
+    border-bottom: 2px solid @menucloud-light-grey-color;
+    margin-bottom: 5px;
+
+  }
+  span.highlight {
+    font-weight: 800;
+  }
+  md-icon {
+    font-size: @menucloud-font-medium-2;
+    margin-bottom: 2px;
+    margin-right: 2px;
+  }
+
+  .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: @menucloud-clear-blue-color;
+  }
+}

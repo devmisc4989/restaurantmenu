@@ -1,0 +1,43 @@
+.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+
+    .add-button(md-theme="menucloud-std")
+        md-button.md-raised.btn1(data-ng-click="vm.new_menu()")
+            span NEW MENU
+                md-icon.material-icons add
+
+    .left_item.add_ellipsis_if_overflow(md-theme="menucloud-std")
+
+        md-select.md-no-underline(
+        data-ng-model="vm.selected_business"
+        placeholder="Choose business"
+        ng-model-options="{trackBy: '$value.id'}"
+        )
+
+            md-option(
+            data-ng-repeat="business in vm.businesses"
+            data-ng-value="business"
+            ) {{ business.name }}
+
+    .property-list.content-without-subnavbar
+
+        div(md-theme="menucloud-std")
+
+            <!-- ######### Published header ######### -->
+
+            div.property-title(layout="row" layout-align="space-between center")
+                h4.md-title(flex='10') PUBLISHED
+                md-button.md-fab.md-mini.btn1(aria-label="Channel" )
+                    md-icon rss_feed
+
+            div.property-wrapper
+
+            menus(menu-type="published" sortable="true")
+
+            <!-- ######### Drafts header ######### -->
+
+            div.property-title.extra-margin-top
+                h4.md-title DRAFTS
+
+            div.property-wrapper
+
+            menus(menu-type="drafts")

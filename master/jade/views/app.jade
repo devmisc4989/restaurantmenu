@@ -1,0 +1,35 @@
+// top navbar
+header.topnavbar-wrapper(ng-include="'app/views/partials/top-navbar.html'", data-ng-controller="TopNavBarCtrl as vm")
+
+// sub-top navbar
+header.sub-topnavbar-wrapper(ng-include="'app/views/partials/sub-top-navbar.html'", ng-controller="SubtopnavbarCtrl as vm")
+
+// notification bar
+div(ng-include="'app/views/partials/notification-bar.html'", ng-controller="NotificationBarCtrl as vm")
+
+// sidebar
+aside.aside(ng-include="'app/views/partials/sidebar.html'", ng-controller="SidebarController")
+
+// offsidebar
+aside.offsidebar(ng-include="'app/views/partials/offsidebar.html'")
+
+// Main section
+section.main-section
+
+  // Page content
+  .content-wrapper(ui-view="", autoscroll="false", ng-class="app.viewAnimation")
+  
+// Page footer
+//footer(ng-include="'app/views/partials/footer.html'")
+
+script.
+  Userback = window.Userback || {};
+  Userback.access_token = '828|939|iGZtYMs7RnxJNpdki9iUvf7Tta5rus4M93g8QIfH6NrTdEevOx';
+  (function(id) {
+  if (document.getElementById(id)) {return;}
+  var s = document.createElement('script');
+  s.id = id;
+  s.src = 'https://static.userback.io/widget/v1.js';
+  var parent_node = document.head || document.body;
+  parent_node.appendChild(s);
+  })('userback-sdk');

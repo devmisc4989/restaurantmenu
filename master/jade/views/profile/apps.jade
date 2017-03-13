@@ -1,0 +1,36 @@
+.help-contact-button.icon-left.icon-need-help
+  | Need help contact support&nbsp;
+  a(href='') here
+.property-list
+  .property-wrapper.property-my-apps
+    .property-title
+      h4 MY APPS
+    ///// App Card Start
+    .app-card.my-app-card(ng-repeat="app in vm.apps")
+      //- .item-button
+        button.positive-button(md-ink-ripple ng-click="") {{app.buttonText}}
+      .tab-bar
+        .tab-item(ng-class="{'activated': (app.selectedTab=='description' || !app.selectedTab)}" ng-click="app.selectedTab='description'") DESCRIPTION
+        .tab-item(ng-class="{'activated': app.selectedTab=='details'}" ng-click="app.selectedTab='details'") DETAILS
+      .tab-contents(ng-show="app.selectedTab=='description' || !app.selectedTab")
+        .logo
+          img(ng-src="{{app.description.logo.img}}" ng-if="app.description.logo.img!=''")
+          h2(ng-if="app.description.logo.title!=''") {{app.description.logo.title}}
+        .role {{app.description.role}}
+        p {{app.description.text}}
+
+      .tab-contents(ng-show="app.selectedTab=='details'")
+        .row
+          .detail-field.col.col-sm-3 Your subscription:
+          .col.col-sm-8
+            span(class="right-space") Free
+            span(class="right-space") '$0/month'
+        .row
+          .detail-field.col.col-sm-3 Added restaurants
+          .col.col-sm-8
+            span(ng-repeat="item in vm.restaurants" class="right-space") {{item.name}}
+    ///// App Card End
+    .contact-wrapper.text-center
+      p Have an idea? we want to here about it!
+      .subform-item.item-button
+        button.positive-button(md-ink-ripple ng-click="") CONTACT

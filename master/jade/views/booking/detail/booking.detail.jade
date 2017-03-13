@@ -1,0 +1,29 @@
+.page-main-container.property-container(data-ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+
+    .top-right-buttons.with-sub-navbar(
+        md-theme="menucloud-std"
+        layout="row"
+        flex="100"
+        layout-align="end start"
+    )
+
+        booking-status-command(booking-data="vm.booking_object" layout="row")
+
+    .property-list.booking-detail.content-without-subnavbar
+
+        div(md-theme="menucloud-std")
+            booking-status-line(status-data="vm.booking_object.stage", flow-data="vm.booking_object.booking_type.workflow")
+
+            booking-guest-box(booking-guest="vm.booking_object.contact")
+            booking-date-box(booking-date="vm.booking_object.date")
+            booking-time-box(booking-time="vm.booking_object.date")
+            booking-count-box(booking-count="vm.booking_object.number_of_guests")            
+            booking-note-box(booking-note="vm.booking_object.notes")
+            br
+            booking-form-container()
+            br
+            booking-comment-box()
+            br
+            //booking-feedback-box()
+            //br
+            booking-activity-box()

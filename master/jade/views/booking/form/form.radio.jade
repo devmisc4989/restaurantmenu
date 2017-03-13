@@ -1,0 +1,22 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2
+              md-radio-group(ng-model="vm.radio_value")
+                div(ng-repeat="elem in item.options")
+                  md-radio-button.md-primary(value="{{elem}}") {{elem}}
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          md-radio-group(ng-model="item.value")
+            div(ng-repeat="elem in item.options")
+              md-radio-button.md-primary(value="{{elem}}") {{elem}}
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.save_value()"
+            ) SAVE

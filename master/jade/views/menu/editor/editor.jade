@@ -1,0 +1,50 @@
+.page-main-container.property-container(
+data-ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}"
+data-ng-click="vm.unselect()"
+)
+
+    .top-left-buttons.with-sub-navbar(
+    md-theme="menucloud-std"
+    layout="row"
+    flex="100"
+    layout-align="end start")
+
+        div(flex="20" flex-xs="15")
+
+        div(flex="15")
+            md-button.md-fab.md-mini.btn1(aria-label="Save" data-ng-click="vm.save()")
+                md-icon save
+
+        div(flex="15")
+            md-button.md-fab.md-mini.btn1(aria-label="Preview" data-ng-click="vm.give_not_yet_implemented_feedback()")
+                md-icon remove_red_eye
+
+        div(flex="50")
+            status-changer(menu-data="vm.menu_object" layout="row")
+
+    .left_item.with-sub-navbar.add_ellipsis_if_overflow(md-theme="menucloud-std")
+
+        md-select.md-no-underline(
+        data-ng-model="vm.selected_menu"
+        placeholder="Choose menu"
+        ng-model-options="{trackBy: '$value.id'}"
+        data-ng-change="vm.update()"
+        )
+
+            md-option(
+            data-ng-repeat="menu in vm.menus"
+            data-ng-value="menu"
+            ) {{ menu.title }}
+
+    .property-list.menu-editor.content-with-subnavbar#sortable-container
+
+        div(md-theme="menucloud-std")
+            menu-editor(menu-data="vm.menu_object")
+
+        //pre
+        //    code.highlight
+        //        p {{ vm.menu_object_raw.items | json }}
+        //
+        //pre
+        //    code.highlight
+        //        p {{ vm.menu_object.items | json }}

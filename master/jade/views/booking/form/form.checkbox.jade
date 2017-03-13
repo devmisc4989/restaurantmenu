@@ -1,0 +1,23 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2
+              div(ng-repeat="elem in item.options")
+                md-checkbox.md-primary(ng-checked="vm.exists(elem, item.value)") {{elem}}
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          div(ng-repeat="elem in item.options")
+            md-checkbox.md-primary(
+              ng-checked="vm.exists(elem, item.value)" 
+              ng-click="vm.toggle(elem, item.value)"
+              ) {{elem}}                  
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.save_value()"
+            ) SAVE

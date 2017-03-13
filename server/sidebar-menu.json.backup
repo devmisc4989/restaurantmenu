@@ -1,0 +1,25 @@
+[
+  {
+    "text": "Menu Heading",
+    "heading": "true",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Dashboard",
+    "sref": "app.dashboard",
+    "icon": "fa fa-home",
+    "translate": "sidebar.nav.SINGLEVIEW"
+  },
+  {
+    "text": "Menu",
+    "sref": "#",
+    "icon": "icon-folder",
+    "submenu": [
+      { "text": "Sub Menu", 
+        "sref": "app.submenu", 
+        "translate": "sidebar.nav.menu.SUBMENU" 
+      }    
+    ],
+    "translate": "sidebar.nav.menu.MENU"
+  }
+]

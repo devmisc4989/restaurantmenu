@@ -1,0 +1,15 @@
+.auth-popup.box-center(ng-show='auth.popup.showPopup')
+  .popup-modal.vertical-mid-container
+    .popup-content.padding.vertical-mid-inner
+      .popup-icon
+        img.full-image(src='app/img/checkmark.png')
+      .subtitle.text-center
+        .title {{auth.popup.title}}
+        .desc
+          span A link have been sent to you email address ({{auth.popup.receiverEmail}}).
+          br
+          span If you can not find the link check you spam folder.
+      .form-item.form-item-margin-4x
+        button.btn.button(ui-sref='{{auth.popup.okUri}}' md-ink-ripple) {{auth.popup.okText}}
+      .form-item.form-item-margin-2x.text-right
+        a.form-link(ng-click='auth.popup.resendLink()') Resend link here

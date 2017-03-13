@@ -1,0 +1,37 @@
+div.page-main-container(ng-controller='DashboardCtrl as vm' ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+  .logo-wrapper
+    img.full-image(src="/app/img/Logo3.png")
+  .row.dashboard-items
+    .col.col-sm-6.dashboard-item
+      img.full-image(src="/app/img/dashboard/Menus.png")
+      .dashboard-item-wrapper.vertical-mid-container
+        .dashboard-item-content.vertical-mid-inner
+          img.full-image(src='app/img/icons/Menu_icon.png')
+          h3 MENUS
+          a(href='')
+            span CREATE YOUR FIRST MENU
+            em.icon-arrow-right
+    .col.col-sm-6
+      .col.col-sm-12.dashboard-item
+        img.full-image(src="/app/img/dashboard/Restaurant_Background.png ")
+        .dashboard-item-wrapper.vertical-mid-container
+          .dashboard-item-content.vertical-mid-inner
+            img.full-image(src='app/img/icons/Icon_restaurant.png')
+            h3 RESTAURANTS
+            a(ui-sref='app.restaurant')
+              span MANAGE YOUR RESTAURANTS
+              em.icon-arrow-right
+      .col.col-sm-6.col-xs-6.dashboard-item
+        img.full-image(src="/app/img/dashboard/Learn_Basics.png")
+        .dashboard-item-wrapper.vertical-mid-container
+          em.help-button.icon-help
+          .dashboard-item-content-2
+            h3 LEARN THE BASICS
+            p LEARN WHAT MENU CLOUD HAS TO OFFER
+      .col.col-sm-6.col-xs-6.dashboard-item
+        img.full-image(src="/app/img/dashboard/Need_help.png")
+        .dashboard-item-wrapper.vertical-mid-container
+          em.help-button.icon-help
+          .dashboard-item-content-2
+            h3 NEED SOME HELP?
+            p GET IN TOUCH WITH OUR SUPPORT

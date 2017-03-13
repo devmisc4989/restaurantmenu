@@ -1,0 +1,424 @@
+{
+  "title": "Menu Examples",
+  "description": "this is a description",
+  "fixed_price": false,
+  "items": [
+    {
+      "type": "group",
+      "name": "Category 1",
+      "description": "This is a category description for Category 1 with no price or option pattern"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price",
+      "prices": [
+        {
+          "amount": "17",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 2",
+      "description": "This item has 3 prices with 2 labels",
+      "prices": [
+        {
+          "amount": "14 per person",
+          "description": ""
+        },
+        {
+          "amount": "5",
+          "description": "sampler"
+        },
+        {
+          "amount": "45",
+          "description": "larger platter"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 3",
+      "description": "This item has an option with general price and descriptiion with it with no selections",
+      "options": [
+        {
+          "amount": "+3.00",
+          "description": "add some love"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 4",
+      "description": "This item has an option with selections but no general description or overall general price",
+      "options": [
+        {
+          "amount": " ",
+          "description": "",
+          "selection": [
+            {
+              "amount": "3",
+              "description": "more love"
+            },
+            {
+              "amount": "5",
+              "description": "love you loooong time"
+            },
+            {
+              "amount": "10",
+              "description": "cloud 9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 5",
+      "description": "This item has an option with general description and price with selections with some prices also (hyrbrid selection pricing)",
+      "options": [
+        {
+          "amount": "+5",
+          "description": "add any of these choices",
+          "selection": [
+            {
+              "amount": " ",
+              "description": "more love"
+            },
+            {
+              "amount": " ",
+              "description": "more spite"
+            },
+            {
+              "amount": "+3",
+              "description": "for both"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 6",
+      "description": "This item has a several options, for use cases where there's more than one option allowed (ie add sides, make into combo)",
+      "options": [
+        {
+          "amount": "",
+          "description": "choices available",
+          "selection": [
+            {
+              "amount": "",
+              "description": "more love"
+            },
+            {
+              "amount": "",
+              "description": "more spite"
+            },
+            {
+              "amount": "+3",
+              "description": "get both"
+            }
+          ]
+        },
+        {
+          "amount": "+10",
+          "description": "make this a combo for a very long time"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 7",
+      "description": "This item shows a combination of a pricing pattern and also a options pattern, this can get crazy!",
+      "prices": [
+        {
+          "amount": "3",
+          "description": "good time"
+        },
+        {
+          "amount": "5",
+          "description": "great time"
+        },
+        {
+          "amount": "10",
+          "description": "loooong time"
+        }
+      ],
+      "options": [
+        {
+          "amount": "5",
+          "description": "for additional options",
+          "selection": [
+            {
+              "amount": " ",
+              "description": "option 1"
+            },
+            {
+              "amount": " ",
+              "description": "option 2"
+            },
+            {
+              "amount": "+6",
+              "description": "best option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price",
+      "prices": [
+        {
+          "amount": "17",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price",
+      "prices": [
+        {
+          "amount": "17",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price",
+      "prices": [
+        {
+          "amount": "17",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "Category 2",
+      "description": "This category has an example of a price pattern",
+      "prices": [
+        {
+          "amount": "20.95",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "group",
+      "name": "Category 3",
+      "description": "This category has an example of a price pattern and labels",
+      "prices": [
+        {
+          "amount": "14 per person",
+          "description": ""
+        },
+        {
+          "amount": "5",
+          "description": "sampler"
+        },
+        {
+          "amount": "45",
+          "description": "larger platter"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "group",
+      "name": "Category 4",
+      "description": "This category has an example of a price pattern and labels",
+      "options": [
+        {
+          "amount": "+5",
+          "description": "add any of these choices",
+          "selection": [
+            {
+              "amount": " ",
+              "description": "more love"
+            },
+            {
+              "amount": " ",
+              "description": "more spite"
+            },
+            {
+              "amount": "+3",
+              "description": "for both"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "group",
+      "name": "Category 5",
+      "description": "This category has an example of a price pattern and labels",
+      "prices": [
+        {
+          "amount": "3",
+          "description": "good time"
+        },
+        {
+          "amount": "5",
+          "description": "great time"
+        },
+        {
+          "amount": "10",
+          "description": "loooong time"
+        }
+      ],
+      "options": [
+        {
+          "amount": "5",
+          "description": "for additional options",
+          "selection": [
+            {
+              "amount": " ",
+              "description": "option 1"
+            },
+            {
+              "amount": " ",
+              "description": "option 2"
+            },
+            {
+              "amount": "+6",
+              "description": "best option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "group",
+      "name": "Category 6",
+      "description": "This category has an example of a price pattern"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item_group",
+      "name": "Sub-Cateory 1",
+      "description": "this is an example of a subcategory in a category"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item_group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "item_group",
+      "name": "Sub-Cateory 2",
+      "description": "this is an example of a subcategory in a category",
+      "options": [
+        {
+          "amount": "10",
+          "description": "all items are"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item",
+      "name": "Item 1",
+      "description": "This item has just only one price"
+    },
+    {
+      "type": "item_group_end",
+      "name": "",
+      "description": ""
+    },
+    {
+      "type": "group_end",
+      "name": "",
+      "description": ""
+    }
+  ]
+}

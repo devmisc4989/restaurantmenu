@@ -1,0 +1,54 @@
+div(
+data-ng-class="{ 'selected': vm.mark_selected }"
+data-ng-click="vm.select(menuData, $event)"
+)
+    md-card.editor.menu-object-item.menu-subcategory.hide-error-msg(
+    md-theme="menucloud-std"
+    layout="column"
+    data-as-sortable-item-handle=''
+    )
+
+        md-card-header(
+        layout="row"
+        layout-align="start center"
+        data-ng-show="vm.mark_selected"
+        )
+            i.the-drag-handle.material-icons(layout="row" flex="100" flex-offset="5" layout-align="start center") drag_handle
+            md-button.md-icon-button.the-x-button(data-ng-click="vm.delete_item(menuData)")
+                md-icon.material-icons close
+
+        md-card-content(layout="column" flex="100")
+            div(layout="row" flex="100")
+                div(layout="row" flex="55" layout-align="end start")
+                    div.subcategory-content(layout="column" flex="100" layout-align="end start")
+                        div(layout="row" flex="100")
+                            md-input-container.header3(flex="100" md-no-float)
+                                textarea(data-no-drag ng-model="menuData.name" placeholder="SUBCATEGORY")
+                        div(layout="row" flex="100")
+                            md-input-container.paragraph1(flex="100" md-no-float)
+                                textarea(data-no-drag ng-model="menuData.description" placeholder="DESCRIPTION")
+
+                div(flex)
+
+                div(layout="column" flex="40" layout-align="end end")
+                    prices(menu-data="menuData")
+
+            div(layout="column" flex="100")
+                menu-options-rendered(
+                menu-data="menuData"
+                data-ng-show="!vm.show_more"
+                )
+                menu-options(
+                menu-data="menuData"
+                data-ng-show="vm.show_more"
+                )
+
+        md-card-actions(
+        layout="row"
+        layout-align="end center"
+        flex="100"
+        data-ng-show="vm.mark_selected"
+        )
+            md-button(data-ng-click="vm.show_more=!vm.show_more")
+                md-icon.material-icons(data-ng-show="!vm.show_more") expand_more
+                md-icon.material-icons(data-ng-show="vm.show_more") expand_less

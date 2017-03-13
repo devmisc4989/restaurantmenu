@@ -1,0 +1,27 @@
+form.auth-form.has-subtitle.form-validate(
+ng-controller="AuthVerifyCtrl as vm",
+role='form',
+name="vm.passwordForm",
+novalidate='',
+ng-submit="vm.verify()",
+ng-show="!vm.invalidMsg",
+ng-autodisable
+)
+  .form-item.form-item-margin
+    input(type='password', name='account_password', placeholder='Password', ng-model="vm.account.password", ng-pattern="/^[a-zA-Z0-9]{8,32}$/", ng-required="true",
+    ng-class="{'input-danger': vm.passwordForm.account_password.$dirty && (vm.passwordForm.account_password.$error.required || vm.passwordForm.account_password.$error.pattern)}")
+    span.text-danger(ng-show="vm.passwordForm.account_password.$dirty && vm.passwordForm.account_password.$error.required") * This field is required
+    span.text-danger(ng-show="vm.passwordForm.account_password.$dirty && vm.passwordForm.account_password.$error.pattern") * Input should match 'a-zA-Z0-9' and 8-32 length
+  .form-item.form-item-margin
+    input(type='password', name='account_password_confirm', placeholder='Confirm password', ng-model="vm.account.password_confirm", ui-validate="'$value==vm.account.password'" ui-validate-watch="'password'", required='',
+    ng-class="{'input-danger': vm.passwordForm.account_password_confirm.$dirty && (vm.passwordForm.account_password_confirm.$error.required || vm.passwordForm.account_password_confirm.$error.validator)}")
+    span.text-danger(ng-show="vm.passwordForm.account_password_confirm.$dirty && vm.passwordForm.account_password_confirm.$error.required") * This field is required
+    span.text-danger(ng-show="vm.passwordForm.account_password_confirm.$dirty && vm.passwordForm.account_password_confirm.$error.validator") * Password does Not match
+  .form-item.form-item-margin-2x
+    input(type='checkbox' name='agree' ng-required='true' ng-model='vm.agree'
+    ng-class="{'input-danger': vm.passwordForm.agree.$dirty && (vm.passwordForm.agree.$error.required)}")
+    .checkbox-label Sign up to receive news about the service and stayupdated on future releases.
+    span.text-danger(ng-show="vm.passwordForm.agree.$dirty && vm.passwordForm.agree.$error.required") * You must agree the terms
+  .form-item.form-item-margin-2x
+    button.btn.button(type='submit' ng-disabled="processing" md-ink-ripple) SIGN IN
+  .form-item.form-item-margin-2x.alert.alert-danger.text-center(ng-show='vm.errMsg || vm.invalidMsg') {{vm.errMsg || vm.invalidMsg}}

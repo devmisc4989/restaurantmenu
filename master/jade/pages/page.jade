@@ -1,0 +1,11 @@
+div(autoscroll='false')
+  .auth-bg.box-center
+    .auth-form-container.signup-form
+      .logo-container
+        .logo
+      .subtitle.text-center(ng-show="auth.form.title.name!='' || auth.form.title.description!=''")
+        .title(ng-show="auth.form.title.name!=''" ng-class="{'has-icon': auth.form.title.hasIcon}") {{auth.form.title.name}}
+        i(ng-show="auth.form.title.hasIcon" class="{{auth.form.title.icon}}")
+        .desc(ng-show="auth.form.title.description!=''") {{auth.form.title.description}}
+      div(ui-view='')
+  div(ng-include="'app/pages/partials/auth-popup.html'")

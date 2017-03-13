@@ -1,0 +1,27 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2.text-center
+              .inner-addon.left-addon
+                input.form-control(
+                  type='text', 
+                  value="{{item.value}}", 
+                  style='font-size: 20px; font-weight: 300; text-align:center; border: none;', 
+                  placeholder="N/A")
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+
+          md-input-container.md-block.md-icon-float.md-icon-right            
+            md-select(ng-model="item.value")
+              md-option(ng-repeat="elem in item.options" value="{{elem}}")
+                | {{elem}}
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.save_value()"
+            ) SAVE

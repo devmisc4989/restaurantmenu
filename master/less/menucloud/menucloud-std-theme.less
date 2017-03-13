@@ -1,0 +1,543 @@
+md-content.md-menucloud-std-theme {
+  background-color: @menucloud-view-background;
+}
+
+// Buttons
+// -----------------------------------
+
+form h3 {
+  margin: 20px 0;
+}
+
+// Buttons
+// -----------------------------------
+
+.grey_button_mixing {
+  color: @menucloud-medium-grey-color;
+  background-color: @menucloud-white-color;
+  &:hover {
+    background-color: @menucloud-white-grey-color;
+  }
+  & > span {
+    margin: 0 10px;
+  }
+}
+
+.blue_button_mixing {
+  color: @menucloud-white-color !important; // I had to use important because someone else had use it before in the inline styles
+  background-color: @menucloud-sky-blue-color;
+  &:hover {
+    background-color: @menucloud-clear-blue-color;
+  }
+}
+
+.orange_button_mixing {
+  color: @menucloud-white-color;
+  background-color: @menucloud-orange-one-color;
+  &:hover {
+    background-color: @menucloud-orange-two-color;
+  }
+}
+
+.md-button.md-menucloud-std-theme.btn1.md-raised {
+  .grey_button_mixing;
+}
+
+a.md-button.md-menucloud-std-theme.md-raised:not([disabled]) md-icon, .md-button.md-menucloud-std-theme.md-raised:not([disabled]) md-icon {
+  color: @menucloud-medium-grey-color;
+}
+
+.md-button.md-menucloud-std-theme.btn1 md-icon {
+  min-width: 10px;
+  font-size: 16px;
+  margin: 0 0 4px 4px;
+  font-weight: 600;
+}
+
+.md-button.md-menucloud-std-theme.btn1.md-raised.md-primary {
+  .blue_button_mixing;
+}
+
+.md-button.md-menucloud-std-theme.btn1.md-raised.md-warn {
+  .orange_button_mixing
+}
+
+.md-button.md-menucloud-std-theme.md-fab {
+  background-color: initial;
+  //box-shadow: initial;
+}
+
+a.md-button.md-menucloud-std-theme.md-primary.md-raised, 
+a.md-button.md-menucloud-std-theme.md-primary.md-fab, 
+.md-button.md-menucloud-std-theme.md-primary.md-raised, 
+.md-button.md-menucloud-std-theme.md-primary.md-fab {
+  color: @menucloud-white-color !important; // I had to use important because someone else had use it before in the inline styles
+  background-color: @menucloud-sky-blue-color;
+  &:hover, &:not([disabled]):hover {
+    background-color: @menucloud-clear-blue-color;
+  }
+  & > span {
+    margin: 0 10px;
+  }
+}
+
+a.md-button.md-menucloud-std-theme.md-accent.md-raised, 
+a.md-button.md-menucloud-std-theme.md-accent.md-fab, 
+.md-button.md-menucloud-std-theme.md-accent.md-raised, 
+.md-button.md-menucloud-std-theme.md-accent.md-fab {
+  color: @menucloud-white-color !important; // I had to use important because someone else had use it before in the inline styles
+  background-color: @menucloud-light-red-color;
+  &:hover, &:not([disabled]):hover {
+    //background-color: @menucloud-clear-blue-color;
+  }
+  & > span {
+    margin: 0 10px;
+  }
+}
+
+.btn-group-container{
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3) !important;
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3) !important;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3) !important;
+  margin-bottom: 20px;
+}
+
+a.md-menucloud-std-theme.btn-menu-bar{
+  background-color: @menucloud-white-color;
+  color: @menucloud-light-gray-color;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  &.active{
+    color: @menucloud-light-red-color;  
+  }
+}
+
+a.md-button.md-menucloud-std-theme.md-fab, .md-button.md-menucloud-std-theme.md-fab {
+  color: @menucloud-clear-blue-color;
+  background-color: @menucloud-white-color;
+  &:hover {
+    background-color: @menucloud-white-grey-color;
+  }
+  & > span {
+    margin: 0 10px;
+  }
+  & md-icon {
+    color: @menucloud-sky-blue-color;
+    font-weight: initial;
+    margin: initial;
+  }
+}
+
+a.md-button.md-menucloud-std-theme.md-fab:not([disabled]):hover,
+.md-button.md-menucloud-std-theme.md-fab:not([disabled]):hover,
+a.md-button.md-menucloud-std-theme.md-fab:not([disabled]).md-focused,
+.md-button.md-menucloud-std-theme.md-fab:not([disabled]).md-focused {
+  background-color: @menucloud-white-grey-color;
+}
+
+.md-button.md-menucloud-std-theme.md-fab.md-mini {
+  height: 10px;
+  width: 35px;
+  line-height: 0px;
+}
+
+// Inputs & Labels
+// -----------------------------------
+
+input, .md-placeholder, md-input-container label {
+  font-family: @menucloud-roboto-light;
+}
+
+md-input-container .md-placeholder {
+  font-family: @menucloud-roboto;
+}
+
+md-input-container .md-placeholder md-input-container.md-input-focused label {
+  font-family: @menucloud-roboto-light;
+}
+
+md-input-container.md-input-focused label {
+  font-family: @menucloud-roboto;
+}
+
+// Interactions
+
+md-input-container.md-menucloud-std-theme.md-input-invalid .md-input {
+  border-color: @menucloud-orange-one-color;
+}
+
+md-input-container.md-menucloud-std-theme:not(.md-input-invalid).md-input-focused .md-input {
+  border-color: @menucloud-clear-blue-color;
+}
+
+md-input-container.md-menucloud-std-theme:not(.md-input-invalid).md-input-focused label {
+  color: @menucloud-clear-blue-color;
+}
+
+md-input-container.md-menucloud-std-theme.md-input-invalid.md-input-focused label {
+  color: @menucloud-orange-one-color;
+}
+
+md-input-container.md-menucloud-std-theme:not(.md-input-invalid).md-input-focused md-icon {
+  color: @menucloud-clear-blue-color;
+}
+
+// Icons
+// -----------------------------------
+
+.material-icons.orange-one {
+  color: @menucloud-orange-one-color;
+}
+
+.material-icons.orange-two {
+  color: @menucloud-orange-two-color;
+}
+
+.material-icons.white {
+  color: @menucloud-white-color;
+}
+
+.material-icons.white-grey {
+  color: @menucloud-white-grey-color;
+}
+
+.material-icons.light-grey {
+  color: @menucloud-light-grey-color;
+}
+
+.material-icons.dark-grey {
+  color: @menucloud-dark-grey-color;
+}
+
+.material-icons.black {
+  color: @menucloud-black-color;
+}
+
+.material-icons.sky-blue {
+  color: @menucloud-sky-blue-color;
+}
+
+.material-icons.clear-blue {
+  color: @menucloud-clear-blue-color;
+}
+
+// Dialogs
+// -----------------------------------
+
+md-dialog.md-menucloud-std-theme {
+  max-height: 90%;
+  height: auto;
+}
+
+md-toolbar.md-menucloud-std-theme.dialog {
+  background-color: initial;
+  margin-bottom: 50px;
+}
+
+md-toolbar.md-menucloud-std-theme.dialog md-icon {
+  color: @menucloud-black-color;
+}
+
+md-toolbar.md-menucloud-std-theme.dialog .md-toolbar-tools h2 {
+  color: @menucloud-orange-one-color;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+md-dialog .md-dialog-content.dialog {
+  margin: 0 50px;
+  @media @smartphones, @tablets {
+    margin: 0 10px;
+  }
+}
+
+md-dialog-actions.dialog {
+  margin: 30px 0;
+}
+
+// Selects
+// -----------------------------------
+
+md-select.md-menucloud-std-theme {
+  margin: 4px 0;
+}
+
+md-select.md-menucloud-std-theme .md-select-value.md-select-placeholder {
+  color: @menucloud-dark-grey-color;
+}
+
+md-select.md-menucloud-std-theme .md-select-value, md-select.md-menucloud-std-theme:not([disabled]):focus .md-select-value {
+  border-bottom: none;
+  font-size: @menucloud-font-medium-2;
+  font-family: @menucloud-roboto-light;
+}
+
+md-select-menu.md-menucloud-std-theme md-option[selected] {
+  color: @menucloud-clear-blue-color;
+
+}
+
+md-select.md-menucloud-std-theme:not([disabled]):focus .md-select-value {
+  border-bottom-color: @menucloud-clear-blue-color;
+  color: @menucloud-dark-grey-color;
+}
+
+md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value {
+  border-bottom-color: @menucloud-clear-blue-color;
+  color: @menucloud-dark-grey-color;
+}
+
+md-select-menu.md-menucloud-std-theme md-option[selected]:focus {
+  color: @menucloud-clear-blue-color;
+}
+
+// Cards
+// -----------------------------------
+
+.menu-card {
+  margin: 10px 0;
+  md-card.md-menucloud-std-theme {
+    margin: 5px 1px;
+    padding-left: 5px;
+  }
+  .md-menucloud-std-theme h2 {
+    font-size: @menucloud-font-large-2;
+    color: @menucloud-dark-grey-color;
+    text-align: left;
+    font-family: @menucloud-roboto-light;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  md-card-title {
+    padding-top: 7px;
+    padding-bottom: 0;
+    padding-right: 0;
+    md-icon {
+      font-size: @menucloud-font-large-3;
+      font-weight: lighter;
+      @media @smartphones, @tablets {
+        // Hack
+        text-align: right;
+        margin-right: 19px;
+      }
+
+    }
+  }
+  md-card-content {
+    padding-bottom: 5px;
+    padding-right: 0;
+    p {
+      font-family: @menucloud-roboto-light;
+      color: @menucloud-sky-blue-color;
+      text-align: left;
+      font-size: @menucloud-font-small-2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.booking-card {
+  margin: 10px 0;
+  md-card.md-menucloud-std-theme {
+    margin: 5px 1px;
+    padding-left: 5px;
+
+    &.green-card,
+    &.blue-card,
+    &.orange-card{
+      h2{
+        color: @menucloud-white-grey-color;
+      }
+      span.title-date-text{
+        color: @menucloud-white-grey-color;
+      }
+      md-icon {
+        color: @menucloud-white-grey-color;
+      }
+      p{
+        color: @menucloud-white-grey-color;
+      }
+    }
+
+    &.green-card{
+      background: @menucloud-green-dark-color;
+    }
+
+    &.blue-card{
+      background: @menucloud-blue-sharp-color;
+    }
+    &.orange-card{
+      background: @menucloud-yellow-gold-color;
+    }
+  }
+
+  .md-menucloud-std-theme h2 {
+    font-size: @menucloud-font-large-2;
+    color: @menucloud-dark-grey-color;
+    text-align: left;
+    font-family: @menucloud-roboto-light;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    
+    i{
+      font-size: 18px;
+      vertical-align: middle;
+      margin-right: 5px;    
+    }
+  }
+  md-card-title {
+    padding-top: 7px;
+    padding-bottom: 0;
+    padding-right: 0;
+    md-icon {
+      font-size: @menucloud-font-large-3;
+      font-weight: lighter;
+      @media @smartphones, @tablets {
+        // Hack
+        text-align: right;
+        margin-right: 19px;
+      }
+
+    }
+    span.title-date-text{
+      font-size: @menucloud-font-medium-2;
+      color: @menucloud-dark-grey-color;
+      font-family: @menucloud-roboto-light;
+    }
+  }
+  md-card-content {
+    padding-bottom: 5px;
+    padding-right: 0;
+    p {
+      font-family: @menucloud-roboto-light;
+      color: @menucloud-sky-blue-color;
+      text-align: left;
+      font-size: @menucloud-font-small-2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.booking-panel{
+  h1 {
+    font-size: @menucloud-font-large-3;
+    color: @menucloud-dark-grey-color;
+    font-family: @menucloud-roboto-light;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  h5 {
+    font-size: @menucloud-font-small-2;
+    color: @menucloud-dark-grey-color;
+    font-family: @menucloud-roboto-light;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+}
+
+// SweetAlert dialogs
+// -----------------------------------
+
+.md_button_mixing {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 0;
+  margin-top: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: currentColor;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  outline: none;
+  border: 0;
+  display: inline-block;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 6px;
+  line-height: 36px;
+  min-height: 36px;
+  background: transparent;
+  white-space: nowrap;
+  min-width: 88px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  letter-spacing: 0.010em;
+}
+
+.show-swal2.md-menucloud-std-theme {
+  font-family: @menucloud-roboto-light;
+  padding: 40px 60px !important;
+  padding-top: 60px !important;
+  & button.cancel {
+    .blue_button_mixing !important;
+    .md_button_mixing;
+  }
+  & button.confirm {
+    .orange_button_mixing !important;
+    .md_button_mixing;
+  }
+}
+
+@swal2-modal-button-padding: 20px;
+
+.swal2-modal.md-menucloud-std-theme {
+  & .swal2-close {
+    color: black;
+    font-size: @menucloud-font-large-3;
+    top: 12px;
+    right: 25px;
+    &:hover {
+      color: @menucloud-clear-blue-color !important;
+    }
+  }
+  & button.styled {
+    padding: initial;
+    &.swal2-modal {
+      padding: initial;
+    }
+    &.swal2-confirm {
+      background-color: @menucloud-orange-one-color !important;
+      padding-left: @swal2-modal-button-padding;
+      padding-right: @swal2-modal-button-padding;
+    }
+    &.swal2-cancel {
+      background-color: @menucloud-sky-blue-color !important;
+      color: white !important;
+      padding-left: @swal2-modal-button-padding;
+      padding-right: @swal2-modal-button-padding;
+    }
+  }
+
+}

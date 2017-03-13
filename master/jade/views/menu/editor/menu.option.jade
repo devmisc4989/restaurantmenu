@@ -1,0 +1,62 @@
+div.menu-option(layout="column" flex="100")
+
+    div.menu-option-header(layout="row" flex="100")
+        md-button.md-icon-button(data-ng-click="vm.remove_option(menuData, $parent.$parent.menuData)")
+            md-icon.material-icons close
+
+        select.md-no-underline.custom-select(
+        no-drag
+        flex="25"
+        data-ng-model="menuData.type"
+        )
+            //ng-model-options="{trackBy: '$value.id'}"
+            //data-ng-change="vm.update_option(menuData)"
+                md-on-open="vm.test_fn($event)"
+                placeholder="Choose option type"
+
+            option(value="") Choose type
+
+            option(
+            data-ng-repeat="type in vm.option_types"
+            data-ng-value="type.name"
+            ) {{ type.name }}
+
+        .div(flex=5)
+
+        md-input-container.paragraph2(
+        flex="45"
+        md-no-float)
+
+            input(
+            placeholder="Label"
+            data-ng-model="menuData.description"
+            )
+
+        .div(flex=10)
+
+        md-input-container.paragraph2.price(
+        flex="15"
+        md-no-float)
+
+            input(
+            placeholder="Price"
+            data-ng-model="menuData.amount"
+            data-ng-focus="vm.show_remove_btn = true"
+            data-ng-blur="vm.show_remove_btn = false"
+            )
+
+        md-button.md-icon-button(
+        data-ng-click="vm.clear_price(menuData)")
+            md-icon.material-icons close
+
+    // Print all the selections
+    menu-selection(
+    data-ng-repeat="selection in menuData.selection"
+    menu-data="selection")
+
+    // New selection button
+    div.add-new-selection(layout="row" flex="90" flex-offset="10")
+        div
+            md-icon.material-icons add
+            a(data-ng-click="vm.add_selection(menuData)")
+                span add selection

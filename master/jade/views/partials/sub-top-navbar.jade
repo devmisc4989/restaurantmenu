@@ -1,0 +1,37 @@
+// START Sub Top Navbar
+nav.navbar.sub-topnavbar(ng-show='app.layout.hasSubTopNavBar')
+    // START Sub Nav wrapper
+    .sub-nav-wrapper
+        // START Tab
+        .sub-nav-tab-wrapper
+            .sub-nav-tab-items
+                a.sub-nav-tab-item(
+                href=''
+                ng-class="{'active': subtopnavbar.tabId==$index}"
+                ng-click='onSelectTab($index)'
+                ng-repeat="item in subtopnavbar.items"
+                ng-if="item.state == null"
+                )
+                    em(class="{{item.iconClass}}")
+                    span {{item.title}}
+
+                a.sub-nav-tab-item(
+                href=''
+                ng-class="{'active': subtopnavbar.tabId==$index}"
+                ng-click='onSelectTab($index)'
+                ng-repeat="item in subtopnavbar.items"
+                ng-if="item.state"
+                ui-sref="{{item.state}}"
+                )
+                    em(class="{{item.iconClass}}")
+                    span {{item.title}}
+        // END Tab
+        // START Back Button
+        .sub-nav-back-wrapper
+            a(ng-href="{{ vm.go_back_link }}")
+                //ui-sref="{{vm.go_back_link}}")
+                em.icon-nav-back
+                span.hidden-xs  {{subtopnavbar.navBack.title}}
+        // END Back Button
+    // START Sub Nav wrapper
+// END Sub Top Navbar

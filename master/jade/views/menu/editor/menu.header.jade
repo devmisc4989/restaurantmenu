@@ -1,0 +1,33 @@
+div(
+data-ng-class="{ 'selected': vm.mark_selected }"
+data-ng-click="vm.select(menuData, $event)"
+)
+    md-card.editor.menu-object-item.menu-header.add-shadow.add-margin-bottom(md-theme="menucloud-std" layout="column")
+
+        md-card-title(layout="row" layout-align="start center")
+
+            md-card-title-text(flex="100")
+                md-input-container.header1(flex="100" md-no-float)
+                    textarea(data-no-drag ng-model="menuData.title" placeholder="MENU TITLE")
+
+        md-card-content(layout="row" flex="100")
+            div(layout="column" flex="100")
+
+                div(layout="row" flex="100")
+                    md-input-container.paragraph1(flex="100" md-no-float)
+                        textarea(data-no-drag ng-model="menuData.description" placeholder="DESCRIPTION")
+
+                div(layout="row" flex="100" layout-align="end center" data-ng-show="false")
+                    .add_ellipsis_if_overflow(md-theme="menucloud-std")
+                        md-select.md-no-underline(
+                        data-ng-model="vm.selected_business"
+                        placeholder="Updated by Daniel"
+                        ng-model-options="{trackBy: '$value.id'}"
+                        )
+                            md-option(
+                            data-ng-repeat="business in vm.businesses"
+                            data-ng-value="business"
+                        ) {{ business.name }
+
+                //p Updated by {{ item.creator.first_name }} /
+                //    span.uppercase {{ item.createdAt | date:'dd MMMM yyyy'}}

@@ -1,0 +1,28 @@
+ul.collapsible.popout(data-collapsible='accordion')
+    li
+      .collapsible-header()
+        .row
+          legend.col-sm-12(style='margin-bottom: 10px;') {{item.label}}
+        .static-body
+          .row
+            .col-sm-8.col-sm-offset-2.text-center
+              .inner-addon.left-addon
+                h4(ng-if="item.value == ''") NO FILE
+                a.file-attachment(href="javascript:();" ng-if="item.value != ''" )
+                  i.fa.fa-paperclip 
+                  span Attachment
+          br
+      .collapsible-body
+        div(flex="75" style='margin: auto;')
+          div
+            h4(ng-if="item.value == ''") NO FILE
+            a.file-attachment(href="{{item.value}}" ng-if="item.value != ''" )
+              i.fa.fa-paperclip
+              span Attachment
+
+          file-uploader()
+
+          div(align="center")
+            md-button.md-raised.md-primary(
+            ng-click="vm.upload()"
+            ) UPLOAD

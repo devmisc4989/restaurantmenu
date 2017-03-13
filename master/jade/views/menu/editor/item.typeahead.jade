@@ -1,0 +1,35 @@
+.custom-popup-wrapper.typeahead-dropdown(
+ng-show='$parent.$parent.$parent.$parent.vm.focused',
+ng-style="{top: position().top+'px', left: position().left+'px'}",
+aria-hidden='{{!isOpen()}}'
+)
+    div.add-new-product(
+    layout="row"
+    flex="100"
+    layout-align="start center"
+    data-ng-show="$parent.$parent.$parent.$parent.menuData.title"
+    )
+        div
+            md-icon.material-icons add
+            a(data-ng-click="$parent.$parent.$parent.$parent.vm.add_product($parent.$parent.$parent.$parent.menuData)")
+                span() add
+                    span.highlight '{{ $parent.$parent.$parent.$parent.menuData.title }}'
+                    to your products list
+
+    ul.dropdown-menu(role='listbox')
+        li.uib-typeahead-match(
+        ng-repeat='match in matches track by $index',
+        ng-class='{active: isActive($index) }',
+        ng-mouseenter='selectActive($index)',
+        ng-click='selectMatch($index, $event)',
+        role='option',
+        id='{{::match.id}}'
+        data-ng-show="$parent.$parent.$parent.$parent.menuData.title"
+        )
+            div(
+            uib-typeahead-match='',
+            index='$index',
+            match='match',
+            query='query',
+            template-url='templateUrl'
+            )

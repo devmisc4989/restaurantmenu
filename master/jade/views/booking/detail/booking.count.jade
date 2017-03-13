@@ -1,0 +1,25 @@
+ul.collapsible.popout(data-collapsible='accordion')
+  li
+    .collapsible-header()
+      .row
+        legend.col-sm-12(style='margin-bottom: 10px;') Guest Count
+      .static-body
+        .row
+          .col-sm-8.col-sm-offset-2.text-center
+            .inner-addon.left-addon
+              input.form-control(type='text', value="{{vm.selected_count}}", style='font-size: 20px; font-weight: 300; text-align:center; border: none;')
+        br
+    .collapsible-body
+      div(flex="75" style='margin: auto;')
+        md-input-container.md-block.md-icon-float.md-icon-right
+          label GUEST COUNT
+          input(
+          type="number"
+          ng-model='vm.selected_count'
+          style="text-align: center;"
+          )
+
+        div(align="center")
+          md-button.md-raised.md-primary(
+          ng-click="vm.update_count()"
+          ) UPDATE GUEST COUNT

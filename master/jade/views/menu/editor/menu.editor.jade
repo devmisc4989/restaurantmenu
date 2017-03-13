@@ -1,0 +1,11 @@
+div.menu-editor(
+data-as-sortable="$parent.$parent.vm.sort_options"
+data-ng-model="menuData.items"
+)
+    menu-header(menu-data="menuData")
+    toolbar(menu-data="menuData")
+    menu-generic-item(
+    data-ng-repeat="item in menuData.items"
+    data-menu-data="item"
+    data-as-sortable-item
+    )

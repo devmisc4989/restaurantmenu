@@ -1,0 +1,46 @@
+div(
+data-ng-class="{ 'selected': vm.mark_selected }"
+data-ng-click="vm.select(menuData, $event)"
+)
+    md-card.editor.menu-object-item.menu-item.hide-error-msg(
+    md-theme="menucloud-std"
+    layout="column"
+    data-as-sortable-item-handle=''
+    )
+        md-card-header(
+        layout="row"
+        layout-align="start center"
+        data-ng-show="vm.mark_selected"
+        )
+            i.the-drag-handle.material-icons(layout="row" flex="100" flex-offset="5" layout-align="start center") drag_handle
+            md-button.md-icon-button.the-x-button(data-ng-click="vm.delete_item(menuData)")
+                md-icon.material-icons close
+        md-card-content(layout="column" flex="100")
+            div(layout="row" flex="100" layout-align="space-between")
+                div(ng-repeat="attribute in menuData.values track by $index" ng-class="{'flex-55': attribute.type == 'description', 'flex-40': attribute.type == 'price'}")
+                    div(ng-if="attribute.type == 'description'" layout="row" layout-align="end start")
+                        div.item-content(layout="column" flex="100")
+                            div(layout="row" flex="100")
+                                md-input-container.paragraph1(flex="100" md-no-float)
+                                    textarea(
+                                    data-no-drag
+                                    ng-model="attribute.value"
+                                    placeholder="Item Description"
+                                    data-ng-focus="vm.on_focus_description(menuData)"
+                                    data-ng-blur="vm.on_blur_description(menuData)"
+                                    )
+                    div(ng-if="attribute.type == 'price'")
+                        div.item-content(layout="row" flex="100")
+                            md-input-container.paragraph1(flex="100" md-no-float)
+                                textarea(
+                                ng-model="attribute.value"
+                                placeholder="Price"
+                                )
+        md-card-actions(
+        layout="row"
+        layout-align="end center"
+        flex="100"
+        data-ng-show="vm.mark_selected"
+        )
+            md-button(data-ng-click="vm.swap_values(menuData)")
+                md-icon.material-icons sync

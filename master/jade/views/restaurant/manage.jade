@@ -1,0 +1,4 @@
+div.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+  .sub-section-tab-wrapper
+    .tab-wrapper(ng-show='subtopnavbar.tabId==0' ng-include="'app/views/restaurant/contact.html'")
+    .tab-wrapper(ng-show='subtopnavbar.tabId==1' ng-include="'app/views/restaurant/access.html'")

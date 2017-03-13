@@ -1,0 +1,195 @@
+div(ng-if="vm.selected_booking.booking_type.workflow == 'simple'")
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'pending'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-accent(
+        data-ng-click="vm.decline()"
+        )
+            span DECLINE
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.accept()"
+        )
+            span ACCEPT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'confirmed'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'feedback'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.resendFeedback()"
+        )
+            span SEND FEEDBACK REMINDER
+            
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()"
+        )
+            span CLOSE
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'closed'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+div(ng-if="vm.selected_booking.booking_type.workflow == 'detailed'")
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'pending'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.proposal()"
+        )
+            span ACCEPT
+
+        md-button.md-raised.md-accent(
+        data-ng-click="vm.decline()")
+            span DECLINE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'proposal'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.sendProposal()"
+        )
+            span SEND PROPOSAL
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'revision'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.sendProposal()"
+        )
+            span SEND PROPOSAL
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.accept()"
+        )
+            span ACCEPT
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'tentative'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.accept()"
+        )
+            span CONFIRM
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.followupTentative()"
+        )
+            span SEND REMINDER
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'confirmed'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'feedback'" 
+        md-theme="menucloud-std"
+    )
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.followupFeedback()")
+            span SEND FEEDBACK REMINDER
+
+        md-button.md-raised.md-primary(
+        data-ng-click="vm.close()")
+            span CLOSE
+
+        md-button.md-raised.btn1(
+        data-ng-click="vm.print()"
+        )
+            span PRINT
+
+
+    section(
+        layout="row" 
+        layout-align="right center" 
+        layout-wrap ng-if="vm.selected_booking.stage == 'closed'" 
+        md-theme="menucloud-std"
+    )
+        .print-button(md-theme="menucloud-std")
+            md-button.md-raised.btn1(
+            data-ng-click="vm.print()"
+            )
+                span PRINT

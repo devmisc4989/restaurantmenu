@@ -1,0 +1,113 @@
+.success-feedback-alert(ng-show='vm.okMsg') {{vm.okMsg}}
+
+.property-list
+    md-content(md-theme="menucloud-std")
+        div.property-wrapper
+
+            .property-title
+                h4.md-title PROFILE
+
+            form#profileForm(name="vm.profileForm" md-theme="menucloud-std")
+                div(layout="row")
+                    div(flex="25")
+                        .property-profile-img {{user.first_name.charAt(0).toUpperCase()+user.last_name.charAt(0).toUpperCase()}}
+
+                    div(flex="60")
+                        md-input-container.md-block(flex)
+                            label First name
+                            input(
+                            name="first_name"
+                            placeholder="First name"
+                            type='text'
+                            ng-model="vm.user.first_name"
+                            required
+                            )
+                        span.text-danger(ng-show="vm.profileForm.first_name.$dirty && vm.profileForm.first_name.$error.required") * This field is required
+
+                        md-input-container.md-block(flex)
+                            label Last name
+                            input(
+                            name="last_name"
+                            placeholder="Last name"
+                            type='text'
+                            ng-model="vm.user.last_name"
+                            required
+                            )
+                            span.text-danger(ng-show="vm.profileForm.last_name.$dirty && vm.profileForm.last_name.$error.required") * This field is required
+
+                        md-input-container.md-block(flex)
+                            label Email
+                            input(
+                            placeholder="user.one@gmail.com"
+                            name="email"
+                            type='email'
+                            ng-model="vm.user.email"
+                            required
+                            )
+                            span.text-danger(ng-show="vm.profileForm.email.$dirty && vm.profileForm.email.$error.required") * This field is required
+
+                md-button.md-raised.md-primary.btn1(
+                ng-disabled="!vm.profileForm.$valid"
+                ng-click="vm.updateProfile()"
+                )
+                    | Update Profile
+
+    div.property-wrapper
+        .property-title
+            h4.md-title PASSWORD
+
+            form#passwordForm(name="vm.passwordForm" md-theme="menucloud-std")
+                .subform-item
+                    .alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+                div(layout="row")
+                    div(flex="25")
+
+                    div(flex="60")
+                        md-input-container.md-block(flex)
+                            label Current Password
+                            input(
+                            name="password"
+                            type='password'
+                            placeholder="Current password"
+                            ng-model="vm.password.password"
+                            required
+                            autocomplete="off"
+                            ng-pattern="/^[a-zA-Z0-9]{8,32}$/"
+                            )
+                            span.text-danger(ng-show="vm.passwordForm.password.$dirty && vm.passwordForm.password.$error.required") * This field is required
+                            span.text-danger(ng-show="vm.passwordForm.password.$dirty && vm.passwordForm.password.$error.pattern") * Input should match 'a-zA-Z0-9' and 8-32 length
+
+                        md-input-container.md-block(flex)
+                            label New Password
+                            input(
+                            name="password_new"
+                            type='password'
+                            placeholder="New password"
+                            ng-model="vm.password.password_new"
+                            required
+                            autocomplete="off"
+                            ng-pattern="/^[a-zA-Z0-9]{8,32}$/"
+                            )
+                            span.text-danger(ng-show="vm.passwordForm.password_new.$dirty && vm.passwordForm.password_new.$error.required") * This field is required
+                            span.text-danger(ng-show="vm.passwordForm.password_new.$dirty && vm.passwordForm.password_new.$error.pattern") * Input should match 'a-zA-Z0-9' and 8-32 length
+
+                        md-input-container.md-block(flex)
+                            label Confirm New Password
+                            input(
+                            type="password"
+                            name="confirm_password"
+                            placeholder="Confirm new password"
+                            ng-model="vm.password.confirm"
+                            ui-validate="'$value==vm.password.password_new'"
+                            ui-validate-watch="'password_new'"
+                            required=''
+                            )
+                            span.text-danger(ng-show="vm.passwordForm.confirm_password.$dirty && vm.passwordForm.confirm_password.$error.required") * This field is required
+                            span.text-danger(ng-show="vm.passwordForm.confirm_password.$dirty && vm.passwordForm.confirm_password.$error.validator") * Password does Not match
+
+                md-button.md-raised.md-primary(
+                for="passwordForm"
+                ng-disabled="!vm.passwordForm.$valid"
+                ng-click="vm.changePassword()"
+                )
+                    | Update Password

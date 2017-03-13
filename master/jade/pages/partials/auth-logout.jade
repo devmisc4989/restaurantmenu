@@ -1,0 +1,28 @@
+
+md-dialog(
+flex="35"
+flex-xs="100"
+md-theme="menucloud-std"
+)
+
+    md-toolbar.dialog(layout="row")
+        .md-toolbar-tools
+            span(flex='10' flex-xs="20")
+            h2.md-headline(flex='80') DO YOU WANT TO SIGN OUT?
+            span(flex='')
+            md-button.md-icon-button(ng-click='dialog.cancel()' flex='10' flex-xs="20")
+                md-icon(md-font-set="md" aria-label="Close") close
+
+    md-dialog-content
+        .md-dialog-content.dialog(layout="column" layout-align="center")
+            .user-info-container
+                .user-photo {{user.first_name.charAt(0).toUpperCase()+user.last_name.charAt(0).toUpperCase()}}
+                .user-full-name {{user.first_name}} {{user.last_name}}           
+
+    md-dialog-actions.dialog(layout="row" layout-align="center center")
+        div.md-dialog-actions
+            span(flex=40)
+            span(flex='')
+            md-button.btn1.md-raised.md-primary(flex='40' ng-click="dialog.logout()") Sign OUT
+            span(flex=40)
+

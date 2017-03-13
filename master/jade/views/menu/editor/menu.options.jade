@@ -1,0 +1,13 @@
+div.menu-options
+
+    menu-option(
+    data-ng-repeat="option in menuData.options"
+    menu-data="option")
+
+    // Add new option button
+    div.add-new-option(layout="row" flex="95" flex-offset="5" layout-align="start center")
+        div
+            md-icon.material-icons add
+            a(data-ng-click="vm.add_option(menuData)")
+                span(data-ng-show="menuData.options.length") add additional option
+                span(data-ng-show="!menuData.options.length") add option

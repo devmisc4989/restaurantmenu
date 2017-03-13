@@ -1,0 +1,1365 @@
+{
+    "_id" : ObjectId("57bd02079514324ab0db027d"),
+    "creator" : null,
+    "owner" : null,
+    "template" : ObjectId("574e10a6362c898d3c54de2d"),
+    "business" : ObjectId("57a78e0a2db0d90300a9eaa4"),
+    "theme" : ObjectId("576bbda295da4f801fbc7bfb"),
+    "menus" : [ 
+        {
+            "users" : [],
+            "business" : {
+                "creator" : "57b5a7c245dd0503000e7307",
+                "owner" : "57b5a7c245dd0503000e7307",
+                "status" : "verified",
+                "address" : {
+                    "line_1" : "100 King Street West",
+                    "line_2" : "",
+                    "city" : "Toronto",
+                    "region" : "Ontario",
+                    "country" : "Canada",
+                    "postal_code" : "M5X 1C7",
+                    "place_id" : "ChIJf3Z9pdI0K4gRs6lQX8OQD0U"
+                },
+                "opening_hours" : {},
+                "place_id" : "ChIJf3Z9pdI0K4gRs6lQX8OQD0U",
+                "website" : "http://www.lawintoronto.com/",
+                "name" : "Robb MacDonald Criminal Lawa",
+                "phone" : "(416) 315-1505",
+                "formatted_address" : "100 King St W, Toronto, ON M5X 1C7, Canada",
+                "international_phone_number" : "+1 416-315-1505",
+                "lat" : "43.64863620000001",
+                "lng" : "-79.3817439",
+                "business_category" : [ 
+                    "restaurant"
+                ],
+                "point_of_contact" : {
+                    "first_name" : "Marcin",
+                    "last_name" : "rapacz",
+                    "email" : "marcin.rapacz@elfinite.com",
+                    "phone" : "",
+                    "notes" : ""
+                },
+                "slug" : "robb_macdonald_criminal_law-WMnKD55zmhHb",
+                "createdAt" : "2016-08-07T19:37:46.739Z",
+                "updatedAt" : "2016-10-03T13:50:52.844Z",
+                "id" : "57a78e0a2db0d90300a9eaa4"
+            },
+            "owner" : {
+                "first_name" : "Marcin",
+                "last_name" : "Rapacz",
+                "email" : "demo@menucloud.io",
+                "place_data" : {
+                    "address" : {
+                        "line_1" : "220 Yonge Street",
+                        "line_2" : "",
+                        "city" : "Toronto",
+                        "region" : "Ontario",
+                        "country" : "Canada",
+                        "postal_code" : "M5B 2H1",
+                        "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs"
+                    },
+                    "opening_hours" : {
+                        "periods" : [ 
+                            {
+                                "close" : {
+                                    "day" : 0,
+                                    "time" : "1900",
+                                    "hours" : 19,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471820400000.0
+                                },
+                                "open" : {
+                                    "day" : 0,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471788000000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 1,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471915800000.0
+                                },
+                                "open" : {
+                                    "day" : 1,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471874400000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 2,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472002200000.0
+                                },
+                                "open" : {
+                                    "day" : 2,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471960800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 3,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472088600000.0
+                                },
+                                "open" : {
+                                    "day" : 3,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1472047200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 4,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471570200000.0
+                                },
+                                "open" : {
+                                    "day" : 4,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471528800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 5,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471656600000.0
+                                },
+                                "open" : {
+                                    "day" : 5,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471615200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 6,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471743000000.0
+                                },
+                                "open" : {
+                                    "day" : 6,
+                                    "time" : "0930",
+                                    "hours" : 9,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471699800000.0
+                                }
+                            }
+                        ],
+                        "weekday_text" : [ 
+                            "Monday: 10:00 AM – 9:30 PM", 
+                            "Tuesday: 10:00 AM – 9:30 PM", 
+                            "Wednesday: 10:00 AM – 9:30 PM", 
+                            "Thursday: 10:00 AM – 9:30 PM", 
+                            "Friday: 10:00 AM – 9:30 PM", 
+                            "Saturday: 9:30 AM – 9:30 PM", 
+                            "Sunday: 10:00 AM – 7:00 PM"
+                        ]
+                    },
+                    "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs",
+                    "website" : "https://www.cfshops.com/toronto-eaton-centre.html",
+                    "name" : "CF Toronto Eaton Centre",
+                    "phone" : "(416) 598-8560",
+                    "formatted_address" : "220 Yonge St, Toronto, ON M5B 2H1, Canada",
+                    "international_phone_number" : "+1 416-598-8560",
+                    "lat" : 43.6544382,
+                    "lng" : -79.3806994
+                },
+                "terms_accepted" : true,
+                "role" : "user",
+                "verified" : true,
+                "verification" : null,
+                "verification_expires" : "2016-08-19T12:19:14.000Z",
+                "subscribed" : true,
+                "createdAt" : "2016-08-18T12:19:14.313Z",
+                "updatedAt" : "2016-10-03T13:50:33.768Z",
+                "password_reset_token" : null,
+                "last_login" : "2016-10-03T13:03:22.301Z",
+                "id" : "57b5a7c245dd0503000e7307"
+            },
+            "creator" : {
+                "first_name" : "Marcin",
+                "last_name" : "Rapacz",
+                "email" : "demo@menucloud.io",
+                "place_data" : {
+                    "address" : {
+                        "line_1" : "220 Yonge Street",
+                        "line_2" : "",
+                        "city" : "Toronto",
+                        "region" : "Ontario",
+                        "country" : "Canada",
+                        "postal_code" : "M5B 2H1",
+                        "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs"
+                    },
+                    "opening_hours" : {
+                        "periods" : [ 
+                            {
+                                "close" : {
+                                    "day" : 0,
+                                    "time" : "1900",
+                                    "hours" : 19,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471820400000.0
+                                },
+                                "open" : {
+                                    "day" : 0,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471788000000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 1,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471915800000.0
+                                },
+                                "open" : {
+                                    "day" : 1,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471874400000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 2,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472002200000.0
+                                },
+                                "open" : {
+                                    "day" : 2,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471960800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 3,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472088600000.0
+                                },
+                                "open" : {
+                                    "day" : 3,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1472047200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 4,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471570200000.0
+                                },
+                                "open" : {
+                                    "day" : 4,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471528800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 5,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471656600000.0
+                                },
+                                "open" : {
+                                    "day" : 5,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471615200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 6,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471743000000.0
+                                },
+                                "open" : {
+                                    "day" : 6,
+                                    "time" : "0930",
+                                    "hours" : 9,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471699800000.0
+                                }
+                            }
+                        ],
+                        "weekday_text" : [ 
+                            "Monday: 10:00 AM – 9:30 PM", 
+                            "Tuesday: 10:00 AM – 9:30 PM", 
+                            "Wednesday: 10:00 AM – 9:30 PM", 
+                            "Thursday: 10:00 AM – 9:30 PM", 
+                            "Friday: 10:00 AM – 9:30 PM", 
+                            "Saturday: 9:30 AM – 9:30 PM", 
+                            "Sunday: 10:00 AM – 7:00 PM"
+                        ]
+                    },
+                    "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs",
+                    "website" : "https://www.cfshops.com/toronto-eaton-centre.html",
+                    "name" : "CF Toronto Eaton Centre",
+                    "phone" : "(416) 598-8560",
+                    "formatted_address" : "220 Yonge St, Toronto, ON M5B 2H1, Canada",
+                    "international_phone_number" : "+1 416-598-8560",
+                    "lat" : 43.6544382,
+                    "lng" : -79.3806994
+                },
+                "terms_accepted" : true,
+                "role" : "user",
+                "verified" : true,
+                "verification" : null,
+                "verification_expires" : "2016-08-19T12:19:14.000Z",
+                "subscribed" : true,
+                "createdAt" : "2016-08-18T12:19:14.313Z",
+                "updatedAt" : "2016-10-03T13:50:33.768Z",
+                "password_reset_token" : null,
+                "last_login" : "2016-10-03T13:03:22.301Z",
+                "id" : "57b5a7c245dd0503000e7307"
+            },
+            "title" : "COMPLETELY NEW MENUw",
+            "description" : "Test 1234",
+            "fixed_price" : false,
+            "scope" : "global",
+            "status" : "queued",
+            "createdAt" : "2016-09-28T12:48:36.629Z",
+            "updatedAt" : "2016-10-03T12:33:04.067Z",
+            "items" : [],
+            "is_published" : true,
+            "id" : "57ebbc24801cf1030087662a"
+        }, 
+        {
+            "users" : [],
+            "business" : {
+                "creator" : "57b5a7c245dd0503000e7307",
+                "owner" : "57b5a7c245dd0503000e7307",
+                "status" : "verified",
+                "address" : {
+                    "line_1" : "100 King Street West",
+                    "line_2" : "",
+                    "city" : "Toronto",
+                    "region" : "Ontario",
+                    "country" : "Canada",
+                    "postal_code" : "M5X 1C7",
+                    "place_id" : "ChIJf3Z9pdI0K4gRs6lQX8OQD0U"
+                },
+                "opening_hours" : {},
+                "place_id" : "ChIJf3Z9pdI0K4gRs6lQX8OQD0U",
+                "website" : "http://www.lawintoronto.com/",
+                "name" : "Robb MacDonald Criminal Lawa",
+                "phone" : "(416) 315-1505",
+                "formatted_address" : "100 King St W, Toronto, ON M5X 1C7, Canada",
+                "international_phone_number" : "+1 416-315-1505",
+                "lat" : "43.64863620000001",
+                "lng" : "-79.3817439",
+                "business_category" : [ 
+                    "restaurant"
+                ],
+                "point_of_contact" : {
+                    "first_name" : "Marcin",
+                    "last_name" : "rapacz",
+                    "email" : "marcin.rapacz@elfinite.com",
+                    "phone" : "",
+                    "notes" : ""
+                },
+                "slug" : "robb_macdonald_criminal_law-WMnKD55zmhHb",
+                "createdAt" : "2016-08-07T19:37:46.739Z",
+                "updatedAt" : "2016-10-03T19:48:33.019Z",
+                "id" : "57a78e0a2db0d90300a9eaa4"
+            },
+            "creator" : {
+                "first_name" : "Marcin",
+                "last_name" : "Rapacz",
+                "email" : "demo@menucloud.io",
+                "place_data" : {
+                    "address" : {
+                        "line_1" : "220 Yonge Street",
+                        "line_2" : "",
+                        "city" : "Toronto",
+                        "region" : "Ontario",
+                        "country" : "Canada",
+                        "postal_code" : "M5B 2H1",
+                        "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs"
+                    },
+                    "opening_hours" : {
+                        "periods" : [ 
+                            {
+                                "close" : {
+                                    "day" : 0,
+                                    "time" : "1900",
+                                    "hours" : 19,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471820400000.0
+                                },
+                                "open" : {
+                                    "day" : 0,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471788000000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 1,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471915800000.0
+                                },
+                                "open" : {
+                                    "day" : 1,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471874400000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 2,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472002200000.0
+                                },
+                                "open" : {
+                                    "day" : 2,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471960800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 3,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1472088600000.0
+                                },
+                                "open" : {
+                                    "day" : 3,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1472047200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 4,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471570200000.0
+                                },
+                                "open" : {
+                                    "day" : 4,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471528800000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 5,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471656600000.0
+                                },
+                                "open" : {
+                                    "day" : 5,
+                                    "time" : "1000",
+                                    "hours" : 10,
+                                    "minutes" : 0,
+                                    "nextDate" : 1471615200000.0
+                                }
+                            }, 
+                            {
+                                "close" : {
+                                    "day" : 6,
+                                    "time" : "2130",
+                                    "hours" : 21,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471743000000.0
+                                },
+                                "open" : {
+                                    "day" : 6,
+                                    "time" : "0930",
+                                    "hours" : 9,
+                                    "minutes" : 30,
+                                    "nextDate" : 1471699800000.0
+                                }
+                            }
+                        ],
+                        "weekday_text" : [ 
+                            "Monday: 10:00 AM – 9:30 PM", 
+                            "Tuesday: 10:00 AM – 9:30 PM", 
+                            "Wednesday: 10:00 AM – 9:30 PM", 
+                            "Thursday: 10:00 AM – 9:30 PM", 
+                            "Friday: 10:00 AM – 9:30 PM", 
+                            "Saturday: 9:30 AM – 9:30 PM", 
+                            "Sunday: 10:00 AM – 7:00 PM"
+                        ]
+                    },
+                    "place_id" : "ChIJvUYHUcs0K4gRN8i7jHsUiYs",
+                    "website" : "https://www.cfshops.com/toronto-eaton-centre.html",
+                    "name" : "CF Toronto Eaton Centre",
+                    "phone" : "(416) 598-8560",
+                    "formatted_address" : "220 Yonge St, Toronto, ON M5B 2H1, Canada",
+                    "international_phone_number" : "+1 416-598-8560",
+                    "lat" : 43.6544382,
+                    "lng" : -79.3806994
+                },
+                "terms_accepted" : true,
+                "role" : "user",
+                "verified" : true,
+                "verification" : null,
+                "verification_expires" : "2016-08-19T12:19:14.000Z",
+                "subscribed" : true,
+                "createdAt" : "2016-08-18T12:19:14.313Z",
+                "updatedAt" : "2016-10-03T19:48:33.021Z",
+                "password_reset_token" : null,
+                "last_login" : "2016-10-03T14:22:58.296Z",
+                "id" : "57b5a7c245dd0503000e7307"
+            },
+            "description" : "this is a description",
+            "fixed_price" : false,
+            "scope" : "global",
+            "status" : "queued",
+            "createdAt" : "2016-08-31T17:36:58.154Z",
+            "updatedAt" : "2016-10-03T19:48:34.957Z",
+            "title" : "Menu Exampless",
+            "sources" : [ 
+                {
+                    "url" : "https://menucloud-source-files.s3.amazonaws.com/6edc99be-f42d-4450-817f-43412ee12247.pdf",
+                    "file_id" : "6edc99be-f42d-4450-817f-43412ee12247.pdf",
+                    "type" : "application/pdf",
+                    "file_name" : "Menu.pdf",
+                    "createdAt" : "2016-08-31T17:37:13.832Z"
+                }
+            ],
+            "items" : [ 
+                {
+                    "type" : "item",
+                    "name" : "This is an item that has a long title expending to two lines. 1",
+                    "description" : "Long description. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+                    "prices" : [],
+                    "options" : [ 
+                        {
+                            "amount" : "12.00",
+                            "description" : "Ketchup",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "1",
+                                    "description" : "A"
+                                }, 
+                                {
+                                    "amount" : "2",
+                                    "description" : "B"
+                                }, 
+                                {
+                                    "amount" : "3",
+                                    "description" : "C"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "1212",
+                            "description" : "Ketchup 2",
+                            "type" : "choice",
+                            "selection" : [ 
+                                {
+                                    "amount" : "2",
+                                    "description" : "AA"
+                                }, 
+                                {
+                                    "amount" : "3",
+                                    "description" : "BB"
+                                }, 
+                                {
+                                    "amount" : "4",
+                                    "description" : "CC"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "This is the first category that has a very long name and needs 5 lines to present its content",
+                    "description" : "This is a description that need 3 lines to presents its content.\nHere it ends.",
+                    "prices" : [ 
+                        {
+                            "amount" : "",
+                            "description" : ""
+                        }
+                    ],
+                    "options" : [ 
+                        {
+                            "amount" : "2",
+                            "description" : "asdasd3",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "3",
+                                    "description" : "AA"
+                                }, 
+                                {
+                                    "amount" : "4",
+                                    "description" : "BB"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "23",
+                            "description" : "AA",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "4",
+                                    "description" : "dasdads"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item_group",
+                    "name" : "This is the first subcategory that has a very long name and needs 5 lines to present its content",
+                    "description" : "This is a description that need 4 lines to presents its content.\nHere it ends.",
+                    "options" : [ 
+                        {
+                            "amount" : "2",
+                            "description" : "asdsad",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "3",
+                                    "description" : "asd"
+                                }, 
+                                {
+                                    "amount" : "4",
+                                    "description" : "sdasdsd"
+                                }, 
+                                {
+                                    "amount" : "4",
+                                    "description" : "asdasd"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "2",
+                            "description" : "sadsd sd sd sad",
+                            "type" : "combo",
+                            "selection" : [ 
+                                {
+                                    "amount" : "3",
+                                    "description" : "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "prices" : [ 
+                        {
+                            "amount" : "a",
+                            "description" : ""
+                        }, 
+                        {
+                            "amount" : "asd",
+                            "description" : ""
+                        }, 
+                        {
+                            "amount" : "asdd",
+                            "description" : ""
+                        }, 
+                        {
+                            "amount" : "asd d",
+                            "description" : ""
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item_group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "",
+                    "description" : "",
+                    "prices" : [ 
+                        {
+                            "amount" : "",
+                            "description" : ""
+                        }
+                    ],
+                    "options" : [ 
+                        {
+                            "amount" : "",
+                            "description" : "",
+                            "type" : "",
+                            "selection" : []
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "note",
+                    "note" : "Long note. \n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Test item",
+                    "description" : "Without category",
+                    "prices" : [],
+                    "options" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "First item",
+                    "description" : "Test description",
+                    "prices" : [],
+                    "options" : [ 
+                        {
+                            "amount" : "",
+                            "description" : "",
+                            "type" : "",
+                            "selection" : []
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 1",
+                    "description" : "This is a category description for Category 1 with no price or option pattern",
+                    "prices" : [],
+                    "options" : [ 
+                        {
+                            "amount" : "10.00",
+                            "description" : "Test 1",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "10.00",
+                                    "description" : "2323"
+                                }, 
+                                {
+                                    "amount" : "10.00",
+                                    "description" : "3232"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "10.00",
+                            "description" : "Test 2",
+                            "type" : "addition",
+                            "selection" : []
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : [ 
+                        {
+                            "amount" : "17.00",
+                            "description" : ""
+                        }
+                    ],
+                    "options" : [ 
+                        {
+                            "amount" : "23",
+                            "description" : "asdasdasd",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "2",
+                                    "description" : "sdsd"
+                                }, 
+                                {
+                                    "amount" : "3",
+                                    "description" : "3"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 2",
+                    "description" : "This item has 3 prices with 2 labels",
+                    "prices" : [ 
+                        {
+                            "amount" : "5.00",
+                            "description" : "sampler"
+                        }, 
+                        {
+                            "amount" : "45.00",
+                            "description" : "larger platter"
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 3",
+                    "description" : "This item has an option with general price and descriptiion with it with no selections",
+                    "options" : [ 
+                        {
+                            "amount" : "+3.00",
+                            "description" : "add some love"
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 4",
+                    "description" : "This item has an option with selections but no general description or overall general price",
+                    "options" : [ 
+                        {
+                            "amount" : " ",
+                            "description" : "",
+                            "selection" : [ 
+                                {
+                                    "amount" : "3",
+                                    "description" : "more love"
+                                }, 
+                                {
+                                    "amount" : "5",
+                                    "description" : "love you loooong time"
+                                }, 
+                                {
+                                    "amount" : "10",
+                                    "description" : "cloud 9"
+                                }
+                            ]
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 5",
+                    "description" : "SHORT DESCRIPTION",
+                    "options" : [ 
+                        {
+                            "amount" : "+5",
+                            "description" : "add any of these choices",
+                            "selection" : [ 
+                                {
+                                    "amount" : " ",
+                                    "description" : "more love"
+                                }, 
+                                {
+                                    "amount" : " ",
+                                    "description" : "more spite"
+                                }, 
+                                {
+                                    "amount" : "+3",
+                                    "description" : "for both"
+                                }
+                            ]
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 6",
+                    "description" : "This item has a several options, for use cases where there's more than one option allowed (ie add sides, make into combo)",
+                    "options" : [ 
+                        {
+                            "amount" : "",
+                            "description" : "choices available",
+                            "selection" : [ 
+                                {
+                                    "amount" : "",
+                                    "description" : "more love"
+                                }, 
+                                {
+                                    "amount" : "",
+                                    "description" : "more spite"
+                                }, 
+                                {
+                                    "amount" : "+3",
+                                    "description" : "get both"
+                                }, 
+                                {
+                                    "amount" : "",
+                                    "description" : ""
+                                }, 
+                                {
+                                    "amount" : "",
+                                    "description" : ""
+                                }
+                            ],
+                            "type" : "addition"
+                        }, 
+                        {
+                            "amount" : "+10",
+                            "description" : "make this a combo for a very long time",
+                            "type" : "combo"
+                        }, 
+                        {
+                            "amount" : "33",
+                            "description" : "Test 111",
+                            "type" : "combo",
+                            "selection" : [ 
+                                {
+                                    "amount" : "12",
+                                    "description" : "BBBBB"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "",
+                            "description" : "",
+                            "type" : "",
+                            "selection" : []
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 7",
+                    "description" : "This item shows a combination of a pricing pattern and also a options pattern, this can get crazy!",
+                    "prices" : [ 
+                        {
+                            "amount" : "3.00",
+                            "description" : "good time"
+                        }, 
+                        {
+                            "amount" : "5.00",
+                            "description" : "great time"
+                        }, 
+                        {
+                            "amount" : "10.00",
+                            "description" : "loooong time"
+                        }, 
+                        {
+                            "amount" : "12",
+                            "description" : "test"
+                        }
+                    ],
+                    "options" : [ 
+                        {
+                            "amount" : "5",
+                            "description" : "for additional options",
+                            "selection" : [ 
+                                {
+                                    "amount" : " ",
+                                    "description" : "option 1"
+                                }, 
+                                {
+                                    "amount" : " ",
+                                    "description" : "option 2"
+                                }, 
+                                {
+                                    "amount" : "+6",
+                                    "description" : "best option"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "Without category",
+                    "prices" : [ 
+                        {
+                            "amount" : "17.00",
+                            "description" : ""
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 2",
+                    "description" : "Without category",
+                    "prices" : [ 
+                        {
+                            "amount" : "17.00",
+                            "description" : ""
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 3",
+                    "description" : "Also without category",
+                    "prices" : [ 
+                        {
+                            "amount" : "17.00",
+                            "description" : ""
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 2",
+                    "description" : "This category has an example of a price pattern",
+                    "prices" : [ 
+                        {
+                            "amount" : "20.95",
+                            "description" : ""
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Last item in Category 2",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 3",
+                    "description" : "This category has an example of a price pattern and labels",
+                    "prices" : [ 
+                        {
+                            "amount" : "14.00",
+                            "description" : ""
+                        }, 
+                        {
+                            "amount" : "5.00",
+                            "description" : "sampler"
+                        }, 
+                        {
+                            "amount" : "45.00",
+                            "description" : "larger platter"
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 4",
+                    "description" : "This category has an example of a price pattern and labels",
+                    "options" : [ 
+                        {
+                            "amount" : "+5",
+                            "description" : "add any of these choices",
+                            "selection" : [ 
+                                {
+                                    "amount" : " ",
+                                    "description" : "more love"
+                                }, 
+                                {
+                                    "amount" : " ",
+                                    "description" : "more spite"
+                                }, 
+                                {
+                                    "amount" : "+3",
+                                    "description" : "for both"
+                                }
+                            ]
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : [],
+                    "options" : [ 
+                        {
+                            "amount" : "12122",
+                            "description" : "AAA 1",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "23",
+                                    "description" : "A1"
+                                }, 
+                                {
+                                    "amount" : "2323",
+                                    "description" : "A2"
+                                }, 
+                                {
+                                    "amount" : "3223",
+                                    "description" : "A3"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "2323",
+                            "description" : "BBB 2",
+                            "type" : "choice",
+                            "selection" : [ 
+                                {
+                                    "amount" : "",
+                                    "description" : "B1"
+                                }, 
+                                {
+                                    "amount" : "",
+                                    "description" : "B2"
+                                }, 
+                                {
+                                    "amount" : "",
+                                    "description" : "B3"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 5",
+                    "description" : "This category has an example of a price pattern and labels",
+                    "prices" : [ 
+                        {
+                            "amount" : "3.00",
+                            "description" : "good time"
+                        }, 
+                        {
+                            "amount" : "5.00",
+                            "description" : "great time"
+                        }, 
+                        {
+                            "amount" : "10.00",
+                            "description" : "loooong time"
+                        }
+                    ],
+                    "options" : [ 
+                        {
+                            "amount" : "5",
+                            "description" : "for additional options",
+                            "selection" : [ 
+                                {
+                                    "amount" : " ",
+                                    "description" : "option 1"
+                                }, 
+                                {
+                                    "amount" : " ",
+                                    "description" : "option 2"
+                                }, 
+                                {
+                                    "amount" : "+6",
+                                    "description" : "best option"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group",
+                    "name" : "Category 6",
+                    "description" : "This category has an example of a price pattern",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item_group",
+                    "name" : "Sub-Category 1",
+                    "description" : "this is an example of a subcategory in a category",
+                    "prices" : [],
+                    "options" : [ 
+                        {
+                            "amount" : "12.00",
+                            "description" : "First item in subcategory",
+                            "type" : "addition",
+                            "selection" : [ 
+                                {
+                                    "amount" : "14.00",
+                                    "description" : "Test AA"
+                                }, 
+                                {
+                                    "amount" : "15.00",
+                                    "description" : "Test BB"
+                                }
+                            ]
+                        }, 
+                        {
+                            "amount" : "13.00",
+                            "description" : "Second item",
+                            "type" : "combo",
+                            "selection" : []
+                        }
+                    ]
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 2",
+                    "description" : "In subcategory",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item_group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "item_group",
+                    "name" : "Sub-Category 2",
+                    "description" : "this is an example of a subcategory in a category",
+                    "options" : [ 
+                        {
+                            "amount" : "10",
+                            "description" : "all items are"
+                        }
+                    ],
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 1",
+                    "description" : "This item has just only one price",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item",
+                    "name" : "Item 2",
+                    "description" : "Also in subcategory",
+                    "prices" : []
+                }, 
+                {
+                    "type" : "item_group_end",
+                    "name" : "",
+                    "description" : ""
+                }, 
+                {
+                    "type" : "group_end",
+                    "name" : "",
+                    "description" : ""
+                }
+            ],
+            "markdown_input" : "= Menu Examples\nthis is a description\n\n\n== Category 1\nThis is a category description for Category 1 with no price or option pattern\n\n\n- Item 1\nThis item has just only one price\n$ 17\n\n\n- Item 2\nThis item has 3 prices with 2 labels, notice that price amount is a string, and not restricted to a numberic value\n$ 14 per person\n$ 5 || sampler\n$ 45 || larger platter\n\n\n- Item 3\nThis item has an option with general price and descriptiion with it with no selections\n+ +3.00 || add some love\n\n\n- Item 4\nThis item has an option with selections but no general description or overall general price\n+  \n++ 3 || more love\n++ 5 || love you loooong time\n++ 10 || cloud 9\n\n\n- Item 5\nThis item has an option with general description and price with selections with some prices also (hyrbrid selection pricing)\n+ +5 || add any of these choices\n++   || more love\n++   || more spite\n++ +3 || for both\n\n\n- Item 6\nThis item has a several options, for use cases where there's more than one option allowed (ie add sides, make into combo)\n+  || choices available\n++  || more love\n++  || more spite\n++ +3 || get both\n+ +10 || make this a combo for a very long time\n\n\n- Item 7\nThis item shows a combination of a pricing pattern and also a options pattern, this can get crazy!\n$ 3 || good time\n$ 5 || great time\n$ 10 || loooong time\n+ 5 || for additional options\n++   || option 1\n++   || option 2\n++ +6 || best option\n\n\n==/\n\n\n- Item 1\nThis item has just only one price\n$ 17\n\n\n- Item 1\nThis item has just only one price\n$ 17\n\n\n- Item 1\nThis item has just only one price\n$ 17\n\n\n== Category 2\nThis category has an example of a price pattern\n$ 20.95\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n==/\n\n\n== Category 3\nThis category has an example of a price pattern and labels\n$ 14 per person\n$ 5 || sampler\n$ 45 || larger platter\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n==/\n\n\n== Category 4\nThis category has an example of a price pattern and labels\n+ +5 || add any of these choices\n++   || more love\n++   || more spite\n++ +3 || for both\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n==/\n\n\n== Category 5\nThis category has an example of a price pattern and labels\n$ 3 || good time\n$ 5 || great time\n$ 10 || loooong time\n+ 5 || for additional options\n++   || option 1\n++   || option 2\n++ +6 || best option\n\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n==/\n\n\n== Category 6\nThis category has an example of a price pattern\n\n\n- Item 1\nThis item has just only one price\n\n\n=== Sub-Cateory 1\nthis is an example of a subcategory in a category\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n===/\n\n\n=== Sub-Cateory 2\nthis is an example of a subcategory in a category\n+ 10 || all items are\n\n\n- Item 1\nThis item has just only one price\n\n\n- Item 1\nThis item has just only one price\n\n\n===/\n\n\n==/\n\n\n",
+            "is_published" : true,
+            "id" : "57c715ba2356ac0300d46849"
+        }
+    ],
+    "updatedAt" : ISODate("2016-10-03T20:31:26.628Z")
+}

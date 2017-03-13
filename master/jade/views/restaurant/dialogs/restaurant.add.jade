@@ -1,0 +1,124 @@
+
+md-dialog(
+flex="35"
+flex-xs="100"
+ng-disabled="disabled"
+md-theme="menucloud-std"
+)
+
+    form(ng-cloak='' name="dialog.dialogForm" ng-disabled="disabled")
+
+        md-toolbar.dialog(layout="row")
+            .md-toolbar-tools
+                span(flex='10' flex-xs="20")
+                h2.md-headline(flex='80') Add Restaurant
+                span(flex='')
+                md-button.md-icon-button(ng-click='dialog.cancel()' flex='10' flex-xs="20")
+                    md-icon(md-font-set="md" aria-label="Close") close
+
+        md-dialog-content
+            .md-dialog-content.dialog(layout="column" layout-align="center")
+                div(flex="75")
+                    form
+                        div
+                            h3.md-title Find location
+                        md-input-container.md-block
+                            md-icon(md-font-set="md" aria-label="") place
+                            input(
+                            type="text"
+                            name="location"
+                            ng-model='dialog.ac_search'
+                            ng-autocomplete=''
+                            options="dialog.ac_options"
+                            details="dialog.ac_details"
+                            required=''
+                            md-autofocus=''
+                            )
+                        div
+                            h3.md-title Details
+
+                        md-input-container.md-block
+                            label Name
+                            input(
+                            type="text"
+                            name="name"
+                            ng-model='dialog.restaurant.name'
+                            )
+                        md-input-container.md-block
+                            label Description
+                            textarea(
+                            type="text"
+                            name="description"
+                            ng-model='dialog.restaurant.description'
+                            )
+                        div
+                            h3.md-title Location
+
+                        md-input-container.md-block
+                            label Line 1
+                            input(
+                            type="text"
+                            name="line_1"
+                            ng-model='dialog.restaurant.address.line_1'
+                            )
+                        md-input-container.md-block
+                            label Line 2
+                            input(
+                            type="text"
+                            name="line_2"
+                            ng-model='dialog.restaurant.address.line_2'
+                            )
+                        md-input-container.md-block
+                            label City
+                            input(
+                            type="text"
+                            name="city"
+                            ng-model='dialog.restaurant.address.city'
+                            )
+                        md-input-container.md-block
+                            label Region
+                            input(
+                            type="text"
+                            name="region"
+                            ng-model='dialog.restaurant.address.region'
+                            )
+                        md-input-container.md-block
+                            label Postal Code
+                            input(
+                            type="text"
+                            name="postal_code"
+                            ng-model='dialog.restaurant.address.postal_code'
+                            )
+
+                        div
+                            h3.md-title Contacts
+
+                        md-input-container.md-block
+                            label Email
+                            md-icon.md-warn(md-font-set="md" aria-label="Email") email
+                            input(
+                            type="text"
+                            ng-model="dialog.restaurant.email"
+                            )
+                        md-input-container.md-block
+                            label Phone
+                            md-icon.md-warn(md-font-set="md" aria-label="Phone") phone
+                            input(
+                            type="text"
+                            ng-model="dialog.restaurant.phone"
+                            )
+                        md-input-container.md-block
+                            label Website
+                            md-icon.md-warn(md-font-set="md" aria-label="First Name") web
+                            input(
+                            type="text"
+                            ng-model="dialog.restaurant.website"
+                            )
+
+        md-dialog-actions.dialog(layout="row" layout-align="center center")
+            div.md-dialog-actions
+                span(flex=40)
+                span(flex='')
+                md-button.btn1.md-raised.md-primary(flex='40' ng-click="dialog.answer()" ng-disabled="processing") Add
+                span(flex=40)
+

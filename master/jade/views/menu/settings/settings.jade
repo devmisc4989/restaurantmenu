@@ -1,0 +1,18 @@
+.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+
+    .property-list.content-with-subnavbar
+
+        div(md-theme="menucloud-std")
+
+            md-content(md-theme="menucloud-std")
+        div.property-wrapper
+
+            .property-title
+                h4.md-title SETTINGS
+
+                div(layout="row")
+
+                    div(flex="25")
+                    div(flex="60")
+                            md-switch(ng-model="vm.menu_object.fixed_price" ng-change="vm.save()") Fixed Price
+

@@ -1,0 +1,29 @@
+ul.collapsible.popout(data-collapsible='accordion')
+  li
+    .collapsible-header()
+      .row
+        legend.col-sm-12(style='margin-bottom: 10px;') NOTES
+      .static-body
+        .row
+          .col-sm-8.col-sm-offset-2.text-center
+            .inner-addon.left-addon
+              textarea.form-control.input-sub-header(
+                rows="5", 
+                placeholder="PLACE YOUR NOTE HERE" 
+                style="border: 0; resize: none; font-size: 20px; font-weight: 300;"
+              )
+                | {{vm.selected_note}}
+        br
+    .collapsible-body
+      div(flex="75" style='margin: auto;')
+        textarea.form-control.input-sub-header(
+        ng-model='vm.selected_note'
+        rows="5"
+        placeholder="PLACE YOUR NOTE HERE" 
+        style="border: 0; resize: none; font-size: 20px; font-weight: 300;"        
+        )
+
+        div(align="center")
+          md-button.md-raised.md-primary(
+          ng-click="vm.update_note()"
+          ) UPDATE NOTE

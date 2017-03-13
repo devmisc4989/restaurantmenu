@@ -1,0 +1,80 @@
+.page-main-container.property-container(ng-class="{'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+
+    .add-button(md-theme="menucloud-std")
+        md-button.md-raised.btn1(ng-click="vm.actions.addRestaurant()") ADD RESTAURANT
+
+    .property-list.restaurant-list
+
+        md-content(
+            md-theme="menucloud-std"
+            layout-xs="column"
+            layout="row"
+            layout-align="center center"
+            ng-repeat="item in vm.list"
+        )
+
+            .app-card.restaurant-card
+
+                .header
+                    a.icon-right.icon-arrow2-right(ui-sref="app.restaurant-manage({id: item.id})") MANAGE {{item.name}}
+                    i.icon-star1.restaurant-favorite
+
+                .content
+                    div(layout="row" layout-align="center center")
+
+                        div(flex="80" flex-xs="70")
+                            h2 {{item.name}}
+                            p {{item.address.line_1}}, {{item.address.line_1+", "}}{{item.address.city}}, {{item.address.postal_code}}
+
+                        div.actions(flex="20" flex-xs="30")
+                            md-fab-speed-dial.md-scale(md-open='false', md-direction='left')
+                                md-fab-trigger
+                                    md-button.md-icon-button(aria-label='menu')
+                                        md-icon.material-icons.orange-one more_vert
+                                md-fab-actions
+                                    md-button.md-icon-button(aria-label='delete')
+                                        md-icon.material-icons.dark-grey(ng-disabled="processing" ng-click="vm.actions.destroyRestaurant(item)") delete
+
+
+
+
+
+                            //md-fab-speed-dial.md-bottom-right.md-scale(md-open='false', md-direction='right')
+                            //    md-fab-trigger
+                            //        md-button.md-fab(aria-label='menu')
+                            //            md-icon(md-font-set="md" aria-label="Menu") menu
+                            //    md-fab-actions
+                            //        md-button.md-fab.md-raised.md-mini(aria-label='Twitter' ng-disabled="processing" ng-click="vm.actions.destroyRestaurant(item)")
+                            //            md-icon(md-font-set="md" aria-label="Remove") delete forever
+
+                //    md-card
+                //        .manage-restaurant
+                //            a.icon-right.icon-arrow2-right(ui-sref="app.restaurant-manage({id: item.id})") MANAGE {{item.name}}
+                //            i.icon-star1.restaurant-favorite
+                //
+                //        md-card-content(layout="row" layout-align="end end")
+                //
+                //            div(flex="80")
+                //                h2.md-title The titles of Washed Out's
+                //                p.md-body-1 breakthrough song and the first single from Paracosm
+                //
+                //            div(flex="20" )
+                //                md-button.md-icon-button(aria-label="Delete")
+                //                    i.material-icons.dark-grey(ng-click="vm.actions.destroyRestaurant(item)") delete
+                //                md-button.md-icon-button(aria-label="More")
+                //                    i.material-icons.orange-one more_vert
+
+    //- .edit-button.icon-option1(ng-hide="restaurant.edit" ng-click="restaurant.edit=true")
+          //- div(ng-show="restaurant.edit")
+            .edit-button.icon-option2(ng-click="restaurant.edit=false")
+            .delete-button.icon-trash(ng-click="deleteRestaurant(restaurant)")
+          //md-fab-speed-dial.md-bottom-right.md-scale(md-open='false', md-direction='right')
+          //  md-fab-trigger
+          //    md-button.md-fab(aria-label='menu')
+          //      md-icon(md-font-set="md" aria-label="Menu") menu
+          //      //- md-icon md-font-icon="android" alt="android"
+          //      //- i.material-icons menu
+          //  md-fab-actions
+          //    md-button.md-fab.md-raised.md-mini(aria-label='Twitter' ng-disabled="processing" ng-click="vm.actions.destroyRestaurant(item)")
+          //      md-icon(md-font-set="md" aria-label="Remove") delete forever
+

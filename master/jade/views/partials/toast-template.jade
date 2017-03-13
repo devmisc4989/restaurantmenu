@@ -1,0 +1,7 @@
+md-toast(class="menucloud-toast")
+    div(class="md-toast-content" layout="row" layout-padding)
+       img(src="app/img/logo4.png")
+       div(layout="column")
+            span(class="md-headline") {{toastCtrl.headline}}
+            span(class="md-subhead") {{toastCtrl.subhead}}
+       md-button(ng-click="toastCtrl.closeToast()") Close

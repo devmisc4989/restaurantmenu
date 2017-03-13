@@ -1,0 +1,36 @@
+div.menu-selection(layout="row" flex="100")
+
+    .div(flex=5)
+
+    md-button.md-icon-button(
+    data-ng-click="vm.remove_selection(menuData, $parent.$parent.menuData)"
+    )
+        md-icon.material-icons close
+
+    md-input-container.paragraph2(
+    flex="50"
+    md-no-float
+    )
+        input(
+        placeholder="Selection"
+        data-ng-model="menuData.description"
+        )
+
+    .div(flex=30)
+
+    md-input-container.paragraph2(
+    flex="15"
+    md-no-float
+    )
+        input(
+        placeholder="Price"
+        data-ng-model="menuData.amount"
+        data-ng-focus="vm.show_remove_btn = true"
+        data-ng-blur="vm.show_remove_btn = false"
+        )
+
+    md-button.md-icon-button(
+    data-ng-click="vm.clear_price(menuData)")
+        md-icon.material-icons close
+
+    //data-ng-class="{ 'make-hidden': !vm.show_remove_btn }"

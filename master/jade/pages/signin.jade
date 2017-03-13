@@ -1,0 +1,27 @@
+form.auth-form.form-validate(
+ng-controller="AuthLoginCtrl as vm"
+role='form'
+ng-submit="vm.login()"
+name='vm.loginForm'
+novalidate=''
+ng-autodisable
+)
+  .form-item.form-item-margin
+    input(type='email', name="email", placeholder='Email', autocomplete='off', ng-model='vm.account.email', required='',
+    ng-class="{'input-danger': vm.loginForm.email.$dirty && (vm.loginForm.email.$error.required || vm.loginForm.email.$error.email)}")
+    span.text-danger(ng-show="vm.loginForm.email.$dirty && vm.loginForm.email.$error.required") * This field is required
+    span.text-danger(ng-show="vm.loginForm.email.$dirty && vm.loginForm.email.$error.email") * This field must be a valid email address
+  .form-item.form-item-margin
+    input(type='password', name='password', placeholder='Password', ng-model='vm.account.password', required='',
+    ng-class="{'input-danger': vm.loginForm.password.$dirty && vm.loginForm.password.$error.required}")
+    span.text-danger(ng-show="vm.loginForm.password.$dirty && vm.loginForm.password.$error.required") * This field is required
+  .form-item.form-item-margin
+    a.form-link.link-forgot-password(ui-sref='page.forgot-password') Forgot your password
+  .form-item.form-item-margin-2x
+    button.btn.button(type='submit', ng-disabled='vm.loading' md-ink-ripple) SIGN IN
+  .form-item.form-item-margin-2x
+    a.form-link.text-right(ui-sref='page.register') SIGN UP
+  .form-item.form-item-margin-2x.alert.alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+  .form-item.form-item-margin-2x.alert.alert-success.text-center(ng-show='vm.okMsg') {{vm.okMsg}}
+  .form-item.form-item-margin-2x.alert.alert-warning.text-center(ng-show="vm.unverified && vm.loginForm.email.$valid")
+    a.text-white(ng-click="vm.getVerified()") Click here if you did not get another copy of confirmation email

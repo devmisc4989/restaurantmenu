@@ -1,0 +1,17 @@
+div(ng-if="item.scope == 'booking'")
+    table(width='100%')
+      tr(style='border-bottom: 1px solid rgba(0,0,0,0.1);')
+        td(style='padding-top: 10px; padding-bottom: 10px;')
+          a(style='color: #5EC1E2;') {{item.actor_name}}
+          |  changed booking stage to 
+          a(style='color: #5EC1E2;') {{item.action}}
+        td.text-right(style='padding-top: 10px; padding-bottom: 10px; color: #8D8D8D;') {{vm.formatDate(item.timestamp)}}
+
+div(ng-if="item.scope == 'comment'")
+    table(width='100%')
+      tr(style='border-bottom: 1px solid rgba(0,0,0,0.1);')
+        td(style='padding-top: 10px; padding-bottom: 10px;')
+          a(style='color: #5EC1E2;') {{item.actor_name}}
+          |  created a 
+          a(style='color: #5EC1E2;') {{item.action}}
+        td.text-right(style='padding-top: 10px; padding-bottom: 10px; color: #8D8D8D;') {{vm.formatDate(item.timestamp)}}

@@ -1,0 +1,41 @@
+// Inline template with sidebar items markup and ng-directives
+script(type='text/ng-template', id="sidebar-renderer.html")
+    span(ng-if="item.heading") {{(item.translate | translate) || item.text}}
+    a(ng-if="!item.heading", ng-href="{{$state.href(item.sref, item.params)}}", title="{{item.text}}")
+        .pull-right(ng-if="item.alert", ng-class="item.label || 'label label-success'") {{item.alert}}
+        em(class="{{item.icon}}", ng-if="item.icon")
+        span {{(item.translate | translate) || item.text}}
+    ul(class="nav sidebar-subnav", ng-if="item.submenu", uib-collapse="isCollapse(pIndex)",  ng-init="addCollapse(pIndex, item)")
+        li.sidebar-subnav-header {{(item.translate | translate) || item.text}}
+        li(ng-repeat='item in item.submenu', ng-include="'sidebar-renderer.html'", ng-class="getMenuItemPropClasses(item)", ng-init="pIndex=(pIndex+'-'+$index); inSubmenu = true", ng-click="toggleCollapse(pIndex)")
+
+// START Sidebar (left)
+.aside-inner.app-side-menu
+    nav.sidebar(sidebar="", sidebar-anyclick-close="", ng-class="{'show-scrollbar': app.layout.asideScrollbar, 'has-sub-topnavbar': app.layout.hasSubTopNavBar}")
+        // START sidebar nav
+        .sidebar-header.hidden-xs
+            img.full-image(src='/app/img/Logo_02.png')
+        ul.nav
+            // Quick Links
+            li.side-quick-links
+                a(href='')
+                    em.icon-star
+                    span QUICK LINKS
+                    em.icon-more
+                .link-items.hidden-xs
+                    a.link-item(href="" ng-repeat='item in sidebar.quickLinks' ng-click="onPageGo(item.sref, item.text, false)") {{item.text}}
+                .link-items.visible-xs
+                    a.link-item(href="" ng-repeat='item in sidebar.quickLinks' ng-click="onPageGo(item.sref, item.text, true)") {{item.text}}
+
+            // Iterates over all sidebar items
+            li.hidden-xs(ng-class="getMenuItemPropClasses(item)", ng-repeat='item in menuItems', ng-init="pIndex = $index", ng-include="'sidebar-renderer.html'", ng-click="toggleCollapse(pIndex, true, false)")
+            li.visible-xs(ng-class="getMenuItemPropClasses(item)", ng-repeat='item in menuItems', ng-init="pIndex = $index", ng-include="'sidebar-renderer.html'", ng-click="toggleCollapse(pIndex, true, true)")
+
+            // Add Extension
+            // li.side-add-extension
+              a(href='')
+                em.icon-plus
+                span ADD EXTENSION
+        // END sidebar nav
+
+// END Sidebar (left)

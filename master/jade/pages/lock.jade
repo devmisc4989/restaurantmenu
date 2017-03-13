@@ -1,0 +1,17 @@
+form.auth-form.has-subtitle.form-validate(
+ng-controller="AuthLockCtrl as vm",
+role='form',
+name="vm.loginForm",
+novalidate='',
+ng-submit="vm.login()"
+ng-autodisable
+)
+  .form-item.form-item-margin
+    input(type='password', name='account_password', placeholder='Password', ng-model="vm.account.password", ng-pattern="/^[a-zA-Z0-9]{8,32}$/", ng-required="true",
+    ng-class="{'input-danger': vm.loginForm.account_password.$dirty && (vm.loginForm.account_password.$error.required || vm.loginForm.account_password.$error.pattern)}")
+    span.text-danger(ng-show="vm.loginForm.account_password.$dirty && vm.loginForm.account_password.$error.required") * This field is required
+    span.text-danger(ng-show="vm.loginForm.account_password.$dirty && vm.loginForm.account_password.$error.pattern") * Input should match 'a-zA-Z0-9' and 8-32 length
+  .form-item.form-item-margin-2x
+    button.btn.button(type='submit' ng-disabled="vm.loading" md-ink-ripple) SIGN IN
+  .form-item.form-item-margin-2x.alert.alert-danger.text-center(ng-show='vm.errMsg') {{vm.errMsg}}
+  .form-item.form-item-margin-2x.alert.alert-success.text-center(ng-show='vm.okMsg') {{vm.okMsg}}

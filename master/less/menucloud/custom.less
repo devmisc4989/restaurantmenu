@@ -1,0 +1,179 @@
+.letter-avatar {
+  background-color: #2196f3;
+  border-radius: 50%;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  span {
+    padding-top: 5px;
+    display: block;
+    font-size: 25px;
+    color: whitesmoke;
+  }
+}
+
+.search-form-rounded {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.search-btn-rounded {
+  /*border-radius:Top-left, Top-right, Bottom-right, Bottom-left;*/
+  border-radius: 0px 30px 30px 0px;
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.required:after {
+  content: " *";
+  color: #f15a24;
+}
+
+// extend bootstrap
+.breadcrumb {
+  .active {
+    a {
+      color: #515253;
+    }
+  }
+  li.disabled,
+  li[disabled] {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+      color: gray;
+      cursor: no-drop;
+    }
+  }
+}
+
+.content-wrapper {
+  .content-heading {
+    margin: -20px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
+
+.table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th,
+.table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th,
+.table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > thead > tr > td.warning,
+.table > thead > tr > th.warning {
+  background-color: #FFE2A9
+}
+
+em.icon:after {
+  content: " "
+}
+
+.content-heading {
+  div {
+    h3 {
+      small {
+        display: block;
+        font-size: 12px;
+        color: #909fa7
+      }
+    }
+  }
+}
+
+.nv-file-over {
+
+  background-color: #f15a24;
+  color: white;
+
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file {
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block; //test
+  }
+}
+
+.ace_editor {
+  height: 600px;
+}
+
+#toast-container {
+  position: fixed;
+  margin-top: 50px;
+  padding-right: 30%;
+  z-index: 999999;
+  pointer-events: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+pre {
+  text-align: initial;
+}
+
+md-switch.md-checked, md-switch.md-checked.md-focused {
+  &.md-thumb:before {
+    background-color: @app-button-default-bg-color;
+  }
+  .md-bar, .md-thumb {
+    color: @app-button-default-bg-color;
+    background-color: @app-button-default-bg-color;
+  }
+}
+
+.notification-container {
+  //Look into this, re-using for now
+  left: inherit !important;
+  right: 10px !important;
+  top: 55px !important;
+  width: 260px !important;
+  border-radius: 0 !important;
+  border: 0.8px solid #b7bbc0 !important;
+  position: absolute;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+  .layout-row {
+    padding: 0 8px;
+  }
+
+  .notification-title {
+    font-size: 18px;
+  }
+
+  .notification-desc {
+    padding: 0px 8px;
+    color: @menucloud-light-gray-color;
+  }
+}

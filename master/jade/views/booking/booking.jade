@@ -1,0 +1,56 @@
+.booking-card()
+
+    div()
+        md-card(md-theme="menucloud-std" 
+                layout="column" 
+                ng-class="(item.stage == 'pending' && item.from_api) ? 'green-card' : (item.has_reminder ? 'orange-card' : (item.stage == 'proposal' ? 'blue-card' : ''))"
+                )
+
+            md-card-title(
+            layout="row"
+            layout-align="start center"
+            ui-sref="app.booking-detail({id: item.id})"
+            data-ng-click="vm.select_booking(item)"
+            )
+
+                md-card-title-text(flex="70" flex-xs="60")
+                    
+                    h2 
+                        i.fa.fa-plus-circle.booking-icon(
+                        ng-show="(item.stage == 'pending')"
+                        )
+                        i.fa.fa-exclamation-triangle.fa-plus.booking-icon(
+                        ng-show="(item.stage == 'proposal') && item.has_reminder"
+                        )
+                        i.fa.fa-exclamation-triangle.fa-plus.booking-icon(
+                        ng-show="(item.stage == 'confirmed') && item.has_reminder"
+                        )
+                        i.fa.fa-check-circle.booking-icon(
+                        ng-show="(item.stage == 'confirmed') && !item.has_reminder"
+                        )
+                        i.fa.fa-exclamation-triangle.fa-plus.booking-icon(
+                        ng-show="(item.stage == 'feedback') && item.has_reminder"
+                        )
+                        
+                        | {{ item.contact.name }}
+
+                span.title-date-text(flex="20" flex-xs="20") {{ item.date | date:'MMMM dd, yyyy'}}
+                md-icon.material-icons(flex="10" flex-xs="20") keyboard_arrow_right
+
+            md-card-content(layout="row" layout-align="start center")
+
+                div(flex="75" flex-xs="60" layout-align="start center")
+                    p {{item.description}} /
+                        span.uppercase {{ item.updatedAt | date:'dd MMMM yyyy'}}
+
+                div(flex)
+
+
+                div.actions(flex="20" flex-xs="30")
+                    md-fab-speed-dial.md-scale(md-open='false', md-direction='left')
+                        md-fab-trigger
+                            md-button.md-icon-button(aria-label='menu')
+                                md-icon.material-icons.orange-one more_vert
+                        md-fab-actions
+                            md-button.md-icon-button(aria-label='delete')
+                                md-icon.material-icons.dark-grey(ng-disabled="processing" ng-click="vm.destroy_booking(item)") delete

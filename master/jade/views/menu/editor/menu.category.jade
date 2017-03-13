@@ -1,0 +1,11 @@
+div.menu-category(
+data-ng-controller="MenuCategoryCtrl as vm"
+data-as-sortable="vm.sort_options"
+data-ng-model="menuData.items"
+)
+    menu-category-header(menu-data="menuData")
+    menu-generic-item.within-category(
+    data-ng-repeat="item in menuData.items"
+    data-menu-data="item"
+    data-as-sortable-item
+    )
